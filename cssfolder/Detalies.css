@@ -1,0 +1,113 @@
+.book-details-section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 60px 120px;
+    /*background: linear-gradient(135deg, #5e2b91, #2c1447);*/
+    min-height: 90vh;
+}
+
+.book-info {
+    flex: 1;
+    padding-right: 40px;
+}
+
+.TitleBooke h1 {
+    color: white;
+    font-size: 42px;
+    font-weight: 700;
+    margin-bottom: 25px;
+    text-align: left;
+    font-family: 'Poppins', sans-serif;
+}
+
+.DicrebtionBook p {
+    color: #f5f5f5;
+    line-height: 1.8;
+    font-size: 18px;
+    text-align: justify;
+    margin-bottom: 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.book-cover {
+    flex: 1;
+    display: flex;
+    flex-direction: row;
+    /*justify-content: center;*/
+    /*align-items: center;*/
+    border: rgba(255, 255, 255, 0.6)solid 2px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+}
+
+.imgeBook {
+    width: 350px;
+    height: auto;
+    border-radius: 20px;
+    /*box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);*/
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+
+.imgeBook:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+
+/* Responsive design*/
+/*@media (max-width: 900px) {*/
+/*    .book-details-section {*/
+/*        flex-direction: column-reverse;*/
+/*        padding: 40px 20px;*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .book-info {*/
+/*        padding-right: 0;*/
+/*    }*/
+
+/*    .TitleBooke h1 {*/
+/*        text-align: center;*/
+/*    }*/
+
+/*    .DicrebtionBook p {*/
+/*        width: 100%;*/
+/*        text-align: justify;*/
+/*    }*/
+
+/*    .imgeBook {*/
+/*        width:50px;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+/*    .imgeBookBack {*/
+/*        width:50px;*/
+/*        margin-bottom: 20px;*/
+/*    }*/
+/*}*/
+.lablebu{
+    background:linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    width: 200px;
+    height: 55px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+    margin-left: 10px;
+    margin-top: 20px;
+    font-size: 20px;
+}
+.lablebu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+}
+.Button{
+
+    margin-left: 50px;
+}
+.imgeBookHent{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}

@@ -1,0 +1,185 @@
+/* General Styles */
+* {
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+.main {
+    background-image: url("../imge/Home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: #333;
+    height: auto;
+    width: 100%;
+}
+
+.allItem {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.allItem h2 {
+    color: white;
+}
+
+/* ===== Books Container ===== */
+.BooksContiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+/* ===== Book Card ===== */
+.Books {
+    width: 250px;
+    min-height: 350px;
+    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 240, 230, 0.1));
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(255, 180, 200, 0.4);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.Books:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 25px rgba(255, 210, 230, 0.6);
+}
+
+/* ===== Book Image ===== */
+.imgeBook {
+    width: 120px;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+/* ===== Stars ===== */
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    color: #FFD700; /* ذهبي فاتح */
+    margin-top: 10px;
+}
+
+/* ===== Section Background ===== */
+.HorezantalBook {
+    background: linear-gradient( #e78ca8, #d46282, #a63e64);
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    height: 500px;
+    border-top: 2px solid rgba(255, 255, 255, 0.4);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+/* ===== Link Reset ===== */
+.aunco {
+    text-decoration: none;
+    color: inherit;
+    display: inline-block;
+}
+/* ===== Why Section ===== */
+.whySection {
+   overflow: auto;
+    padding: 60px 80px;
+    color: #fff;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    height: 500px;
+}
+
+.whyTitle {
+    font-size: 2rem;
+    margin-bottom: 50px;
+    position: relative;
+}
+
+.whyTitle::after {
+    content: "";
+    display: block;
+    width: 120px;
+    height: 3px;
+    background: gold;
+    margin: 15px auto 0;
+    border-radius: 2px;
+}
+
+.whyContainer {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.whyCard {
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
+    transition: 0.3s ease;
+}
+
+.whyCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 12px 25px rgba(255, 200, 220, 0.4);
+}
+
+.whyCard h3 {
+    color: #fff7d1;
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+}
+
+.whyCard p {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: #ffeef3;
+}
+/* تخصيص شريط التمرير (scrollbar) */
+::-webkit-scrollbar {
+    width: 10px; /* عرض الشريط */
+}
+
+/* الخلفية وراء الشريط */
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+}
+
+/* الجزء القابل للتحريك */
+::-webkit-scrollbar-thumb {
+    background: linear-gradient(180deg, #e78ca8, #d46282, #a63e64);
+    border-radius: 10px;
+    border: 2px solid rgba(255, 255, 255, 0.3); /* حواف ناعمة */
+}
+
+/* عند تمرير الماوس فوق الشريط */
+::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(180deg, #f4a1b5, #e57b93, #93324f);
+}
+
+/* للـ Firefox */
+* {
+    scrollbar-width: thin;
+    scrollbar-color: #d46282 rgba(255, 255, 255, 0.1);
+}

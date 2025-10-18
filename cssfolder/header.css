@@ -1,0 +1,178 @@
+.overlay {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(5px);
+    text-align: center;
+    padding: 120px 20px;
+    color: white;
+}
+
+.overlay h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+}
+
+.overlay p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.Login, .CreateAccount {
+    width: 260px;
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    margin: 10px;
+}
+
+.Login{
+    background:linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    width: 250px;
+    height: 40px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.Login:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    /*background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(162,100,100,0.6));*/
+}
+.CreateAccount{
+    background-color: white;
+    width: 250px;
+    height: 40px;
+    color: #D9176C;
+    border: 1px solid #D9176C;
+    border-radius: 20px;
+}
+.CreateAccount:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    /*background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(162,100,100,0.6));*/
+}
+
+
+
+.header {
+    position: relative;
+    width: 100%;
+}
+
+/* الشريط العلوي */
+.top-bar {
+    background-color: #D9176C;
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    padding: 6px 0;
+    letter-spacing: 0.5px;
+}
+.top-barSecond{
+    background: linear-gradient(90deg, #a5516c, #d6547e, #68441b);
+    color: white;
+    text-align: center;
+    font-size: 13px;
+    padding: 6px 0;
+    letter-spacing: 0.5px;
+    border: 1px solid white;
+}
+
+/* الشعار + البحث + الأيقونات */
+.nav-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 60px;
+    backdrop-filter: blur(8px);
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+/* الشعار */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 30px;
+    color: #D9176C;
+}
+
+.logo h1 {
+    font-size: 26px;
+    color: white;
+}
+
+/* شريط البحث */
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 45%;
+    background: white;
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.search-bar input {
+    border: none;
+    outline: none;
+    padding: 10px 20px;
+    width: 100%;
+    font-size: 15px;
+}
+
+.search-bar button {
+    border: none;
+    background-color: #D9176C;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+/* الأيقونات */
+.user-icons {
+    display: flex;
+    gap: 20px;
+}
+
+.user-icons i {
+    font-size: 22px;
+    color: #D9176C;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.user-icons i:hover {
+    transform: scale(1.2);
+}
+
+/* شريط القوائم */
+.menu {
+    background-color: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(6px);
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.menu ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    padding: 12px 0;
+}
+
+.menu a {
+    text-decoration: none;
+    color: white;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.menu a:hover {
+    color: #D9176C;
+}

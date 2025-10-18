@@ -1,0 +1,114 @@
+body {
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    min-height: 100vh;
+
+}
+.login{
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+   flex-direction: column;
+    width: 500px;
+    height: 500px;
+    align-items: center;
+    margin: 0;
+    margin: 10px;
+    color: white;
+
+
+}
+.AllItems{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginItem{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+}
+.input {
+    width: 300px;
+    height: 35px;
+    border-radius: 20px;
+    border: 1px solid white;
+    background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,245,245,0.6));
+    color: white;
+    padding: 5px 15px;
+    outline: none;
+
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+}
+.checkboxLable{
+    display: flex;
+    flex-direction: row;
+    gap:150px;
+    margin-top: 10px;
+}
+.lablebu{
+    background:linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    width: 160px;
+    height: 25px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 20px;
+}
+.lablebu:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    /*background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(162,100,100,0.6));*/
+}
+.facebook {
+    margin-top: 20px;
+    /*background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);*/
+
+
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+    transition: all 0.3s ease;
+
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.facebook:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    /*background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(162,100,100,0.6));*/
+}
+
+.color1 {
+    /*background-color: white;*/
+    color: #1877F2;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 3px 5px;
+}
+.color2 {
+    /*background-color: white;*/
+    color: white;
+    border-radius: 5px;
+    font-size: 16px;
+    padding: 3px 5px;
+}
+
+.top-bar{
+    color: white;
+    text-align: center;
+}

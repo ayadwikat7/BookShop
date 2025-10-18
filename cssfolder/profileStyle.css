@@ -1,0 +1,186 @@
+.Profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.AllItemsProfile {
+    width: 600px;
+    height: auto;
+    border: 2px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25); /* ✅ ظل ناعم وجميل */
+    position: relative;
+}
+
+/* الصورة الشخصية */
+.avatar {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    border: 3px solid white;
+    position: absolute;
+    top: -55px; /* الصورة طالعة لفوق الإطار */
+    left: 50%;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5); /* توهج ناعم حول الصورة */
+}
+
+/* الاسم */
+.name {
+    margin-top: 30px;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.Email {
+    margin-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+/* أقسام الأزرار */
+.design {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+/* صف الأزرار */
+.infor {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    justify-content: center;
+}
+
+/* الأزرار */
+.buttopnprofile,
+.buttopnprofileEdit {
+    border: 2px solid white;
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+/* الأزرار العادية */
+.buttopnprofile {
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    color: white;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttopnprofile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+
+/* زر تعديل البروفايل */
+.buttopnprofileEdit {
+    background: white;
+    color: #a63e64;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+}
+
+.buttopnprofileEdit:hover {
+    background: #ffe4ee;
+    transform: scale(1.05);
+}
+.top-bar{
+    color: white;
+    text-align: center;
+}
+/* 🌸 الهيدر الرئيسي */
+.main-header {
+    background: linear-gradient(135deg, #e24f82, #d6336c, #b0305a);
+    border-radius: 0 0 25px 25px; /* زوايا ناعمة من الأسفل */
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+    font-family: 'Poppins', sans-serif;
+}
+
+/* حاوية المحتوى */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+}
+
+/* اللوجو */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.logo span {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 600;
+}
+
+/* روابط القائمة */
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+/* زر تسجيل الخروج */
+.signout-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: scale(1.05);
+}
+.imgeButton{
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}

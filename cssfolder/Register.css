@@ -1,0 +1,14 @@
+.loginR{
+    border: 1px solid white;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 450px;
+    height: 600px;
+    align-items: center;
+    margin: 0;
+    margin: 10px;
+    color: white;
+
+
+}

@@ -1,0 +1,63 @@
+body {
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    min-height: 100vh;
+
+}
+.allItem{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.allItem h2{
+    color: white;
+}
+.BooksContiner {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.Books {
+    width: 250px;
+    min-height: 350px;
+    background-color: rgba(255, 255, 255, 0.15);
+    border: 1px solid white;
+    border-radius: 20px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    text-align: center;
+    color: white;
+    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    transition: 0.3s ease;
+}
+
+.Books:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(255,255,255,0.5);
+}
+
+.imgeBook {
+    width: 120px;
+    height: 180px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+    object-fit: cover;
+}
+
+.stars {
+    display: flex;
+    justify-content: center;
+    gap: 3px;
+    color: gold;
+    margin-top: 10px;
+}
+.HorezantalBook{
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+}
