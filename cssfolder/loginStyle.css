@@ -1,10 +1,11 @@
 body {
-    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    background:#FDE1DF;
+
     min-height: 100vh;
 
 }
 .login{
-    border: 1px solid white;
+    border: 1px solid #d46282;
     border-radius: 20px;
     display: flex;
    flex-direction: column;
@@ -13,7 +14,7 @@ body {
     align-items: center;
     margin: 0;
     margin: 10px;
-    color: white;
+    color: #d46282;
 
 
 }
@@ -32,13 +33,13 @@ body {
     width: 300px;
     height: 35px;
     border-radius: 20px;
-    border: 1px solid white;
+    border: 1px solid #d46282;
     background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,245,245,0.6));
-    color: white;
+    color: #d46282;
     padding: 5px 15px;
     outline: none;
 
-    box-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 8px rgba(162, 66, 100, 0.6);
 
     font-family: 'Poppins', sans-serif;
     font-size: 14px;
@@ -89,7 +90,7 @@ body {
 
 .facebook:hover {
     transform: scale(1.05);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
+    box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);
     /*background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(162,100,100,0.6));*/
 }
 

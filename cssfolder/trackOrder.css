@@ -1,0 +1,118 @@
+h1{
+   text-align: center;
+
+}
+.BoxTracking{
+
+    width:90%;
+    height: auto;
+    border-radius: 20px;
+    border: #d46282 solid 2px;
+    margin: 50px auto;
+    padding: 15px;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);
+}
+.orderTtile{
+    display: flex;
+    flex-direction: row;
+    color:  rgb(212,98,130,0.58);
+    /*gap: 140px;*/
+    column-gap: 210px;
+    font-size: 10px;
+    /*padding: 5px;*/
+    padding-left:20px;
+    padding-right: 5px;
+    /*padding-bottom: 2px;*/
+    padding-top: 5px;
+    margin: 0;
+}
+
+.orderData h3{
+
+
+    font-size: 18px;
+    color: black;
+}
+.orderData{
+    align-items: center;
+}
+.line{
+    color: #d46282;
+    border: rgb(212,98,130,0.3)solid 1px;
+   margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.TrackOrderData h3{
+
+
+    font-size: 22px;
+    color: black;
+}
+.TrackOrderData{
+    align-items: center;
+}
+.TrackOrderData i{
+   font-size:30px;
+}
+.TrackOrderData h3{
+    font-size:15px;
+}
+.orderDateBox{
+    display: flex;
+    flex-direction: row;
+    color:  rgb(212,98,130);
+    gap: 140px;
+    column-gap: 200px;
+    font-size: 10px;
+    padding: 5px;
+    padding-left:20px;
+    padding-right: 5px;
+    padding-bottom: 2px;
+    padding-top: 35px;
+    margin-bottom: 20px;
+}
+.Orders {
+    background: rgb(212,98,130,0.3);
+    border: #d46282 solid 2px;
+    border-radius: 20px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: space-between; /* 🔹 يخلي العناصر كل وحدة بطرف */
+    align-items: flex-start; /* يخليهم بنفس الخط العلوي */
+    /*color: white;*/
+    /*padding: 8px;*/
+    box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);
+}
+
+.OrderItem {
+    padding-top: 5px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    padding-right: 10px;
+    text-align: center;
+}
+.OrderItem h2{
+    font-size: 18px;
+}
+.OrderItem p{
+    padding-top: 25px;
+    font-size: 16px;
+    color: rgba(14, 12, 13, 0.58);
+}
+.OrderItem img {
+    width: 40px;
+    height: auto;
+    /*border-radius: 8px;*/
+}
+
+.letfItem {
+    display: flex;
+    flex-direction: row; /* 🔹 يخلي العناصر داخل letfItem فوق بعض */
+    gap: 15px; /* مسافة بين العناصر */
+    align-items: flex-end; /* 🔹 يصفّهم على اليمين */
+}

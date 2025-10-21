@@ -1,9 +1,9 @@
 .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: rgba(162, 66, 100, 0.4);
     backdrop-filter: blur(5px);
     text-align: center;
     padding: 120px 20px;
-    color: white;
+    color: #d46282;
 }
 
 .overlay h1 {
@@ -28,11 +28,11 @@
 }
 
 .Login{
-    background:linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
     width: 250px;
     height: 40px;
-    color: white;
-    border: 1px solid white;
+    color: #FDE1DF;
+    border: 1px solid #FDE1DF;
     border-radius: 20px;
 }
 .Login:hover {
@@ -44,7 +44,7 @@
     background-color: white;
     width: 250px;
     height: 40px;
-    color: #D9176C;
+    color: #FDE1DF;
     border: 1px solid #D9176C;
     border-radius: 20px;
 }
@@ -63,8 +63,8 @@
 
 /* الشريط العلوي */
 .top-bar {
-    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
-    color: white;
+    background-color: #D9176C;
+    color: #FDE1DF;
     text-align: center;
     font-size: 13px;
     padding: 6px 0;
@@ -72,12 +72,12 @@
 }
 .top-barSecond{
     background: linear-gradient(90deg, #a5516c, #d6547e, #68441b);
-    color: white;
+    color: #FDE1DF;
     text-align: center;
     font-size: 13px;
     padding: 6px 0;
     letter-spacing: 0.5px;
-    border: 1px solid white;
+    border: 1px solid #FDE1DF;
 }
 
 /* الشعار + البحث + الأيقونات */
@@ -87,7 +87,7 @@
     justify-content: space-between;
     padding: 15px 60px;
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(162, 66, 100, 0.5);
 }
 
 /* الشعار */
@@ -152,7 +152,7 @@
 
 /* شريط القوائم */
 .menu {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(162, 66, 100, 0.3);
     backdrop-filter: blur(6px);
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);

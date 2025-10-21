@@ -168,14 +168,14 @@
 
 /* الجزء القابل للتحريك */
 ::-webkit-scrollbar-thumb {
-    background: linear-gradient(180deg, #e78ca8, #d46282, #a63e64);
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
     border-radius: 10px;
     border: 2px solid rgba(255, 255, 255, 0.3); /* حواف ناعمة */
 }
 
 /* عند تمرير الماوس فوق الشريط */
 ::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(180deg, #f4a1b5, #e57b93, #93324f);
+    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
 }
 
 /* للـ Firefox */
