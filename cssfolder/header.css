@@ -1,9 +1,13 @@
+body{
+    background-color:  #FDE1DF;
+}
+
 .overlay {
-    background-color: rgba(0, 0, 0, 0.4);
+    /*background-color: rgba(0, 0, 0, 0.4);*/
     backdrop-filter: blur(5px);
     text-align: center;
     padding: 120px 20px;
-    color: white;
+    color: #FDE1DF;
 }
 
 .overlay h1 {
@@ -25,13 +29,14 @@
     font-weight: 500;
     cursor: pointer;
     margin: 10px;
+
 }
 
 .Login{
     background:linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
     width: 250px;
     height: 40px;
-    color: white;
+    color: #FDE1DF;
     border: 1px solid white;
     border-radius: 20px;
 }
@@ -41,7 +46,7 @@
     /*background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(162,100,100,0.6));*/
 }
 .CreateAccount{
-    background-color: white;
+    background-color: #FDE1DF;
     width: 250px;
     height: 40px;
     color: #D9176C;
@@ -64,7 +69,7 @@
 /* الشريط العلوي */
 .top-bar {
     background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
-    color: white;
+    color: #FDE1DF;;
     text-align: center;
     font-size: 13px;
     padding: 6px 0;
@@ -72,7 +77,18 @@
 }
 .top-barSecond{
     background: linear-gradient(90deg, #a5516c, #d6547e, #68441b);
-    color: white;
+    color:#FDE1DF;;
+
+    text-align: center;
+    font-size: 13px;
+    padding: 6px 0;
+    letter-spacing: 0.5px;
+    border: 1px solid white;
+}
+.AuthorTap{
+    background: linear-gradient(135deg, rgba(231, 140, 168), rgba(212, 98, 130, 0.1), rgba(166, 62, 100));
+    color:rgba(166, 62, 100);
+
     text-align: center;
     font-size: 13px;
     padding: 6px 0;
@@ -80,17 +96,15 @@
     border: 1px solid white;
 }
 
-/* الشعار + البحث + الأيقونات */
 .nav-container {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 15px 60px;
     backdrop-filter: blur(8px);
-    background-color: rgba(255, 255, 255, 0.3);
+    background-color: rgba(165,81, 108, 0.5);
 }
 
-/* الشعار */
 .logo {
     display: flex;
     align-items: center;
@@ -99,7 +113,8 @@
 
 .logo i {
     font-size: 30px;
-    color: #D9176C;
+    color:  #FDE1DF;
+    /*background-color:  #d6547e;*/
 }
 
 .logo h1 {
@@ -107,12 +122,11 @@
     color: white;
 }
 
-/* شريط البحث */
 .search-bar {
     display: flex;
     align-items: center;
     width: 45%;
-    background: white;
+    background-color:rgb(214,84,126,0.3) ;
     border-radius: 25px;
     overflow: hidden;
 }
@@ -127,13 +141,12 @@
 
 .search-bar button {
     border: none;
-    background-color: #D9176C;
+    background-color:   #FDE1DF;
     color: white;
     padding: 10px 20px;
     cursor: pointer;
 }
 
-/* الأيقونات */
 .user-icons {
     display: flex;
     gap: 20px;
@@ -141,7 +154,7 @@
 
 .user-icons i {
     font-size: 22px;
-    color: #D9176C;
+    color:  #FDE1DF;
     cursor: pointer;
     transition: 0.3s;
 }
@@ -150,9 +163,8 @@
     transform: scale(1.2);
 }
 
-/* شريط القوائم */
 .menu {
-    background-color: rgba(255, 255, 255, 0.1);
+    background-color: rgba(165,81, 108, 0.3);
     backdrop-filter: blur(6px);
     text-align: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);

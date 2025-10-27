@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>All Books </title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cssfolder/header.css">
+    <link rel="stylesheet" href="cssfolder/footer.css">
+    <link rel="stylesheet" href="cssfolder/AllBooks.css">
+    <link rel="stylesheet" href="cssfolder/CategoriesStyle.css">
+    <link rel="stylesheet" href="cssfolder/CategoriesDeatiles.css">
+</head>
+<body>
+<div class="main">
+    <header class="header">
+        <div class="top-bar">
+            <p>📚 Free shipping on orders over $50 | Discover your next great read today!</p>
+        </div>
+
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <h1>BookShop</h1>
+            </div>
+
+            <!--            <div class="search-bar">-->
+            <!--                <input type="text" class="in" placeholder="Search for books, authors, or genres...">-->
+            <!--                <button><i class="fa-solid fa-magnifying-glass"></i></button>-->
+            <!--            </div>-->
+
+            <div class="user-icons">
+                <a href="favorite.html"> <i class="fa-solid fa-heart"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="Profile.html"><i class="fa-solid fa-user"></i></a>
+
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AllBooks.html">Books</a></li>
+                <li><a href="Categories.html">Categories</a></li>
+                <!--                <li><a href="#">Best Sellers</a></li>-->
+                <li><a href="Author.html">Authors</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--    <section class="hero">-->
+    <!--        <div class="overlay">-->
+    <!--            <div class="textBox">-->
+    <!--                <h1>Welcome to Book Shop</h1>-->
+    <!--                <p>Your world of stories begins here</p>-->
+    <!--                <a href="LoginPage.html"> <button class="Login">Login To Your Account</button></a>-->
+    <!--                <a href="Register.html"> <button class="CreateAccount">Create A New Account</button></a>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+</div>
+
+
+<div class="Search">
+    <h2>🔍 Search For Your Favorite Book </h2>
+    <p class="hint">Write the name of a Book or use filters below to refine your search</p>
+
+    <div class="SearchBox">
+        <input type="text" class="SearchInput" placeholder="Search for a category...">
+        <button class="SearchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <div class="FilterBox">
+        <h3>🎯 Filter Options</h3>
+        <div class="filters">
+            <select class="FilterSelect">
+                <option selected disabled>Category</option>
+                <option>Business</option>
+                <option>Technology</option>
+                <option>Health</option>
+                <option>Fiction</option>
+                <option>Self-Development</option>
+            </select>
+
+            <select class="FilterSelect">
+                <option selected disabled>Sort By</option>
+                <option>Most Popular</option>
+                <option>Newest</option>
+                <option>Oldest</option>
+                <option>Highest Rated</option>
+            </select>
+            <select class="FilterSelect">
+                <option selected disabled>Range of Price</option>
+                <option>20$-50$</option>
+                <option>51$-80$</option>
+                <option>81$-100$</option>
+                <option>>1000$</option>
+            </select>
+
+
+        </div>
+        <button class="ApplyFilter"><i class="fa-solid fa-filter"></i> Apply Filters</button>
+    </div>
+</div>
+<div id="CategoryId"class="BooksSectionSalesD">
+    <h2 class="SectionTitleD">All Books In Our BookShop</h2>
+    <p class="hint">Click On Book To Show All Details</p>
+    <div class="SalesCarouselD">
+
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/Book1.jpeg" alt="Book Image">
+                <h2>Atomic Habits</h2>
+                <p class="author">by <span>James Clear</span></p>
+                <p class="desc">Transform your life through small, consistent habits that lead to remarkable results.</p>
+                <p class="stock">In Stock: <span>24 copies</span></p>
+                <p class="stock">Price: <span>22$</span></p>
+
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+
+            </div>
+
+        </a>
+
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/the-power-of-now.jpg" alt="Book Image">
+                <h2>The Power of Now</h2>
+                <p class="author">by <span>Eckhart Tolle</span></p>
+                <p class="desc">Discover the secret to true peace and happiness by living fully in the present moment.</p>
+                <p class="stock">In Stock: <span>15 copies</span></p>
+                <p class="stock">Price: <span>89$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/TheNewPsychologyofSuccess.jpg" alt="Book Image">
+                <h2>Mindset: The New Psychology of Success</h2>
+                <p class="author">by <span>Carol S. Dweck</span></p>
+                <p class="desc">Learn how a growth mindset can unlock your potential and reshape your future.</p>
+                <p class="stock">In Stock: <span>12 copies</span></p>
+                <p class="stock">Price: <span>58$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/DeepWork.jpg" alt="Book Image">
+                <h2>Deep Work</h2>
+                <p class="author">by <span>Cal Newport</span></p>
+                <p class="desc">A guide to mastering focus in a world full of distractions and achieving peak productivity.</p>
+                <p class="stock">In Stock: <span>18 copies</span></p>
+                <p class="stock">Price: <span>90$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/TheMountainIsYou.png" alt="Book Image">
+                <h2>The Mountain Is You</h2>
+                <p class="author">by <span>Brianna Wiest</span></p>
+                <p class="desc">Transform self-sabotage into self-mastery and climb the mountain within yourself.</p>
+                <p class="stock">In Stock: <span>10 copies</span></p>
+                <p class="stock">Price: <span>75$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/YouAreaBadass.jpg" alt="Book Image">
+                <h2>You Are a Badass</h2>
+                <p class="author">by <span>Jen Sincero</span></p>
+                <p class="desc">A refreshing guide to stop doubting yourself, embrace confidence, and live a life you love.</p>
+                <p class="stock">In Stock: <span>22 copies</span></p>
+                <p class="stock">Price: <span>50$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/The5AMClub.jpg" alt="Book Image">
+                <h2>The 5 AM Club</h2>
+                <p class="author">by <span>Robin Sharma</span></p>
+                <p class="desc">Wake up early, maximize your potential, and start each day with clarity, energy, and purpose.</p>
+                <p class="stock">In Stock: <span>17 copies</span></p>
+                <p class="stock">Price: <span>20$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star-half-stroke"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/TheSubtleArtofNotGivingFck.png" alt="Book Image">
+                <h2>The Subtle Art of Not Giving a F*ck</h2>
+                <p class="author">by <span>Mark Manson</span></p>
+                <p class="desc">An honest and humorous approach to living a meaningful life by focusing on what truly matters.</p>
+                <p class="stock">In Stock: <span>20 copies</span></p>
+                <p class="stock">Price: <span>35$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <a href="BookDetails.html">
+            <div class="SaleCard">
+                <img src="imge/categories/Cat1/TheSubtleArtofNotGivingFck.png" alt="Book Image">
+                <h2>The Subtle Art of Not Giving a F*ck</h2>
+                <p class="author">by <span>Mark Manson</span></p>
+                <p class="desc">An honest and humorous approach to living a meaningful life by focusing on what truly matters.</p>
+                <p class="stock">In Stock: <span>20 copies</span></p>
+                <p class="stock">Price: <span>35$</span></p>
+                <div class="stars">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-regular fa-star"></i>
+                    <div class="AddRemoveCart">
+                        <button class="page-btn prev"><i class="fa-solid fa-plus"></i></button>
+                        <!--                    <span class="page-number">add</strong></span>-->
+                        <button class="page-btn next"><i class="fa-solid fa-minus"></i></button>
+                    </div>
+                </div>
+            </div>
+        </a>
+        <!-- 📖 Pagination Section -->
+        <div class="pagination-container">
+            <button class="page-btn prev">« Previous Page</button>
+            <span class="page-number">Page <strong>1</strong></span>
+            <button class="page-btn next">Next Page »</button>
+        </div>
+
+    </div>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>Book Shop is your online destination for books, eBooks, and more.
+                Discover best sellers, classics, and hidden gems across all genres.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h3>Get In Touch</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Nablus, Palestine</p>
+            <p><i class="fa-solid fa-envelope"></i> contact@bookshop.com</p>
+            <p><i class="fa-solid fa-phone"></i> +970 599 123 456</p>
+            <div class="socials">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Book Shop | Designed by Aya Dwikat 💗</p>
+    </div>
+</footer>
+</body>
+</html>

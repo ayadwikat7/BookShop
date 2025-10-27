@@ -1,5 +1,5 @@
 .loginR{
-    border: 1px solid white;
+    border: 1px solid #d46282;
     border-radius: 20px;
     display: flex;
     flex-direction: column;
@@ -9,6 +9,13 @@
     margin: 0;
     margin: 10px;
     color: white;
+    box-shadow: 0 0 8px rgba(162, 66, 100, 0.6);
 
 
+}
+.loginR h2{
+    color: #a63e64;
+}
+.LoginItem{
+    color: #a63e64;
 }

@@ -1,0 +1,373 @@
+.BooksSection {
+    width: 90%;
+    max-width: 1500px;
+    text-align: center;
+    box-shadow: 0 4px 30px #e8d6e2;
+    border-radius: 20px;
+    background-color: #a63e64;
+    height: 480px;
+    padding-top: 50px;
+}
+.BooksSection a {
+    text-decoration: none;
+}
+
+.BooksSectionSalesD{
+    width: 90%;
+    max-width: 1500px;
+    text-align: center;
+
+    border-radius: 20px;
+    transform: scale(1.05);
+    /*box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);*/
+    /*background:linear-gradient(135deg, rgba(231, 140, 168, 0.5), rgba(212, 98, 130, 0.5), rgba(166, 62, 100, 0.5));*/
+    height:auto;
+    padding-top: 50px;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    /*border:2px solid #a63e64;*/
+}
+.BooksSectionSalesD a {
+    text-decoration: none;
+}
+
+
+.SectionTitleD {
+    font-size:3rem;
+    color:  rgba(166, 62, 100, 0.65);
+    text-shadow: 0 0 10px rgba(255, 190, 210, 0.6);
+    margin-bottom: 30px;
+}
+
+.BooksCarousel {
+    display: flex;
+    gap: 25px;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    padding-bottom: 10px;
+}
+
+/*.BooksCarousel::-webkit-scrollbar {*/
+/*    height: 8px;*/
+/*}*/
+/*.BooksCarousel::-webkit-scrollbar-thumb {*/
+/*    background: rgba(255, 180, 200, 0.4);*/
+/*    border-radius: 10px;*/
+/*}*/
+
+/* ====== بطاقة الكتاب ====== */
+.BookCard {
+    flex: 0 0 auto;
+    width: 220px;
+    background: rgba(58, 27, 7, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(255, 190, 210, 0.15);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(10px);
+}
+.ShowMore {
+    flex: 0 0 auto;
+    width: 220px;
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 18px;
+    padding: 18px 25px;
+    text-align: center;
+    color: #ffdce4;
+    font-size: 1rem;
+    font-weight: 500;
+    cursor: pointer;
+    box-shadow: 0 6px 25px rgba(255, 180, 200, 0.2);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(12px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    /*margin: 20px auto 0 auto;*/
+}
+
+.ShowMore:hover {
+    background: rgba(255, 200, 220, 0.25);
+    border-color: rgba(255, 210, 230, 0.5);
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 190, 210, 0.5);
+}
+
+.ShowMore p {
+    margin: 0;
+    color: #ffe9ef;
+    font-size: 1rem;
+    letter-spacing: 0.3px;
+}
+
+.ShowMore i {
+    color: #FFD580;
+    font-size: 1.1rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.ShowMore:hover i {
+    transform: translateX(6px);
+    color: #ffe9ef;
+}
+
+.BookCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255, 200, 220, 0.5);
+}
+
+.BookCard img {
+    width: 120px;
+    height: 170px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.BookCard h2 {
+    font-size: 1rem;
+    color: #ffeaf1;
+    margin-bottom: 5px;
+}
+.BookCard p {
+    font-size: 0.9rem;
+    color: #f6cddd;
+}
+.stars {
+    color: #FFD580;
+    margin-top: 5px;
+}
+
+.CategoriesSection {
+    width: 90%;
+    max-width: 1200px;
+    text-align: center;
+}
+.CategoriesGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 25px;
+    margin-top: 25px;
+    padding: 30px;
+}
+
+.CategoryCard {
+    background: rgba(58, 27, 7, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 18px;
+    padding: 25px;
+    color: #fff;
+    box-shadow: 0 6px 25px rgba(255, 190, 210, 0.15);
+    transition: all 0.3s ease;
+    backdrop-filter: blur(8px);
+
+}
+.CategoryCard:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(255, 180, 200, 0.4);
+}
+
+.CategoryCard h3 {
+    font-size: 1.2rem;
+    color: #ffdce4;
+    margin-bottom: 15px;
+}
+.CategoryCard img {
+    width: 100%;
+    border-radius: 10px;
+    height: 160px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+.CategoryCard img:hover {
+    transform: scale(1.05);
+}
+.CategoriesGrid a {
+    text-decoration: none;
+}
+.RecomandendBook {
+    background: linear-gradient(#e78ca8, #d46282, #a63e64);
+    padding: 50px 0;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+
+}
+
+.RecomandendBook .SectionTitle {
+    color: #fff6f8;
+    text-shadow: 0 0 15px rgba(255, 190, 210, 0.6);
+
+}
+
+.RecomandendBook .BooksCarousel {
+    justify-content: center;
+    padding-top: 20px;
+}
+
+.RecomandendBook .BookCard {
+    background: rgba(255, 255, 255, 0.08);
+    border: 1px solid rgba(255, 255, 255, 0.25);
+}
+
+.RecomandendBook .BookCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0 25px rgba(255, 190, 210, 0.5);
+}
+
+.RecomandendBook .whySection {
+    padding: 60px 80px;
+    color: #FDE1DF;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 20px;
+    margin-top: 40px;
+    padding: 30px;
+}
+/* ================= Sales Section ================= */
+
+.SalesSection {
+    background: linear-gradient(135deg, #ffb6c1, #d46282, #a63e64);
+    padding: 60px 0;
+    text-align: center;
+    border-top: 2px solid rgba(255, 255, 255, 0.3);
+    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
+}
+
+.SalesSection .SectionTitle {
+    color: #fffafc;
+    text-shadow: 0 0 12px rgba(255, 220, 230, 0.6);
+}
+
+.SalesCarouselD {
+    display: flex;
+    justify-content: center;
+    align-items: stretch;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin-top: 40px;
+}
+
+.SaleCard {
+    width: 280px;
+    height: 500px;
+    background: rgba(166, 62, 100, 0.3);
+    border: 1px solid #a63e64;
+    border-radius: 20px;
+    padding: 20px;
+    color: #fff;
+    box-shadow: 0 8px 25px rgba(255, 180, 200, 0.3);
+    transition: all 0.3s ease;
+    position: relative;
+    backdrop-filter: blur(10px);
+}
+
+.SaleCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255, 190, 210, 0.6);
+}
+
+.SaleCard img {
+    width: 120px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 12px;
+    margin-bottom: 12px;
+}
+
+.SaleCard h2 {
+    font-size: 1rem;
+    color: #000000;
+    margin-bottom: 4px;
+}
+
+.SaleCard p {
+    color: #776d70;
+    font-size: 0.9rem;
+    margin-bottom: 10px;
+}
+
+/* ======= Discount Badge ======= */
+.discount-badge {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    background: linear-gradient(135deg, #ff8a9d, #d94d73);
+    color: white;
+    font-weight: bold;
+    padding: 6px 10px;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.price {
+    margin: 10px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.price .old {
+    text-decoration: line-through;
+    color: #ffd1dc;
+    font-size: 0.9rem;
+}
+
+.price .new {
+    color: #fff7a3;
+    font-weight: bold;
+    font-size: 1rem;
+    animation: glowPrice 2s infinite alternate;
+}
+
+/* Animation glow for discount */
+@keyframes glowPrice {
+    from { text-shadow: 0 0 5px #fff7a3; }
+    to { text-shadow: 0 0 20px #ffd700; }
+}
+/* ===== Pagination Styling ===== */
+.pagination-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+}
+
+.page-btn {
+    background-color: #a63e64;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(166, 62, 100, 0.3);
+}
+
+.page-btn:hover {
+    background-color: #d46282;
+    box-shadow: 0 6px 18px rgba(166, 62, 100, 0.4);
+    transform: translateY(-2px);
+}
+
+.page-number {
+    font-size: 1rem;
+    color: #a63e64;
+    background: rgba(255, 220, 230, 0.4);
+    border-radius: 12px;
+    padding: 8px 20px;
+    font-weight: 600;
+    box-shadow: inset 0 0 10px rgba(166, 62, 100, 0.2);
+}
+
+.page-number strong {
+    color: #d46282;
+}

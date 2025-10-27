@@ -1,273 +1,216 @@
-* {
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-.main {
-    background-image: url("../imge/Home.png");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #333;
-    height: auto;
-    width: 100%;
-}
-.SecondBackGround {
-    background-image: url("../imge/Bookpackgroundtwo.jpg");
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    color: #333;
-    height: auto;
-    width: 100%;
-}
-
-.allItem {
+.hroz{
     display: flex;
-    justify-content: center;
+    justify-content: space-between; /* واحد بالبداية وواحد بالنهاية */
     align-items: center;
 }
-
-.allItem h2 {
-    color: white;
-}
-
-.BooksContiner {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 30px;
-    margin-top: 40px;
-}
-
-.Books {
-    width: 250px;
-    min-height: 350px;
-    background: linear-gradient(145deg, rgba(255, 255, 255, 0.2), rgba(255, 240, 230, 0.1));
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
-    padding: 15px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    color: #FDE1DF;
-    box-shadow: 0 8px 25px rgba(255, 180, 200, 0.4);
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.Books:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 210, 230, 0.6);
-}
-
-.imgeBook {
-    width: 120px;
-    height: 180px;
-    border-radius: 10px;
-    margin-bottom: 15px;
-    object-fit: cover;
-}
-
-/* ===== Stars ===== */
-.stars {
-    display: flex;
-    justify-content: center;
-    gap: 3px;
-    color: #FFD700; /* ذهبي فاتح */
-    margin-top: 10px;
-}
-
-.HorezantalBook {
-    background: linear-gradient( #e78ca8, #d46282, #a63e64);
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    height: 500px;
-    border-top: 2px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-}
-.CategoriesBooks {
-    /*background: linear-gradient( #e78ca8, #d46282, #a63e64);*/
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    height: 500px;
-    border-top: 2px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-}
-
-.Author {
-    background: linear-gradient( rgba(198, 118, 144, 1), rgba(212, 98, 130, 0.3), rgba(166, 62, 100));
-    justify-content: center;
-    align-items: center;
-    display: flex;
-    flex-direction: row;
-    gap: 35px;
-    height: 500px;
-    border-top: 2px solid rgba(255, 255, 255, 0.4);
-    border-bottom: 2px solid rgba(255, 255, 255, 0.3);
-
-}
-.aunco {
-    text-decoration: none;
-    color: inherit;
-    display: inline-block;
-}
-.whySection {
-   overflow: auto;
-    padding: 60px 80px;
-    color: #FDE1DF;
-    text-align: center;
-    border-top: 2px solid rgba(255, 255, 255, 0.3);
-    height: 500px;
-}
-
-.whyTitle {
-    font-size: 2rem;
-    margin-bottom: 50px;
+.Right{
+    background:linear-gradient(135deg, rgba(231, 140, 168, 0.3), rgba(212, 98, 130, 0.3), rgba(166, 62, 100, 0.3));
+    width: 800px;
+    height: 600px;
+    border-radius:400px;
     position: relative;
+    left: -200px;
+    border: 2px solid rgba(166, 62, 100, 0.4);
+    box-shadow: 0 3px 10px #a63e64;
 }
 
-.whyTitle::after {
-    content: "";
-    display: block;
-    width: 120px;
-    height: 3px;
-    background: gold;
-    margin: 15px auto 0;
-    border-radius: 2px;
+.left{
+    background:linear-gradient(135deg, rgba(231, 140, 168, 0.3), rgba(212, 98, 130, 0.3), rgba(166, 62, 100, 0.3));
+    width: 800px;
+    height: 600px;
+    border-radius:400px;
+    position: relative;
+   right: -200px;
+    border: 2px solid rgba(166, 62, 100, 0.4);
+    box-shadow: 0 3px 10px #a63e64;
 }
-
-.whyContainer {
-    display: flex;
-    justify-content: center;
-    gap: 40px;
-    flex-wrap: wrap;
-}
-
-.whyCard {
-    background-color: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 25px;
-    width: 300px;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
-    transition: 0.3s ease;
-}
-CategoriesBooksCard {
-    background-color: rgba(0, 0, 0);
-    border: 1px solid rgba(255, 255, 255, 0.3);
-    border-radius: 20px;
-    padding: 25px;
-    width: 300px;
-    box-shadow: 0 8px 20px rgba(255, 255, 255, 0.15);
-    transition: 0.3s ease;
-}
-
-.imgeCard{
-    width: 200px;
-    height: auto;
-}
-.whyCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(255, 200, 220, 0.4);
-}
-
-.whyCard:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 12px 25px rgba(255, 200, 220, 0.4);
-}
-
-
-.whyCard h3 {
-    color: #fff7d1;
-    margin-bottom: 15px;
-    font-size: 1.2rem;
-}
-
-.whyCard p {
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #ffeef3;
-}
-
-::-webkit-scrollbar {
-    width: 10px;
-}
-
-::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-    border-radius: 10px;
-}
-
-::-webkit-scrollbar-thumb {
-    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
-    border-radius: 10px;
-    border: 2px solid rgba(255, 255, 255, 0.3); /* حواف ناعمة */
-}
-
-/* عند تمرير الماوس فوق الشريط */
-::-webkit-scrollbar-thumb:hover {
-    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
-}
-
-/* للـ Firefox */
-* {
-    scrollbar-width: thin;
-    scrollbar-color: rgba(250, 250, 250, 0.022) rgba(255, 255, 255, 0.0001);
-}
-.AuthorCard {
-    width: 250px;
-    min-height: 350px;
-    /*background: linear-gradient(135deg, rgba(231, 140, 168, 0.1), rgba(212, 98, 130, 0.1), rgba(166, 62, 100, 0.1));*/
-    background-color: rgba(191, 107, 135, 0.00001);
-    border: 1px solid rgba(255, 255, 255, 0.6);
-    border-radius: 20px;
-    padding: 15px;
+.Recomaneded {
+    text-align: center;
+    width: 100%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: flex-start;
-    text-align: center;
-    color: #a63e64;
-    box-shadow: 0 8px 25px #a63e64;
-    transition: all 0.3s ease;
-    cursor: pointer;
-}
-
-.AuthorCard:hover {
-    transform: scale(1.05);
-    box-shadow: 0 0 25px rgba(255, 210, 230, 0.6);
-}
-.Author .col {
-    display: flex;
-    flex-direction:column;
     justify-content: center;
-    align-items: center;
-    gap: 35px; /* المسافة بين الكروت */
+    padding: 20px 0;
 }
-.hor{
+.Dis{
+    color: #a63e64;
+}
+.hint{
+    color: rgba(166, 62, 100, 0.6);
+}
+.Recomaneded img{
+    width: 150px;
+    height: auto;
+}
+.Recomaneded h2{
+    color:#a63e64;
+}
+.butt button{
+    margin-bottom: 10px;
+}
+.buttopnprofile
+ {
+    border: 2px solid rgba(166, 62, 100, 0.4);
+    border-radius: 20px;
+    width: 250px;
+    height: 45px;
+    font-size: 15px;
+    font-weight: 500;
     display: flex;
-    flex-direction: row;
-    gap: 20px;
-}
-.hor p{
-    color: rgba(255, 210, 230);
-}
-.col h1{
-    color:  #FDE1DF;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
 }
 
+/* الأزرار العادية */
+.buttopnprofile {
+    background:linear-gradient(135deg, rgba(231, 140, 168, 0.5), rgba(212, 98, 130, 0.5), rgba(166, 62, 100, 0.5));
+    color: white;
+    box-shadow: 0 3px 10px #a63e64;
+}
 
+.buttopnprofile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+}
+/*.SearchBox{*/
+/*    border-radius: 20px;*/
+/*    border: #a63e64 solid 2px;*/
+/*    !*margin: 50px auto;*!*/
+/*    padding: 15px;*/
+/*    transform: scale(1.05);*/
+/*    box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);*/
+/*    width: 500px;*/
+/*    height: 30px;*/
+/*}*/
+.Search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(145deg, rgba(231,140,168,0.3), rgba(212,98,130,0.2),#a63e64 );
+    border-radius: 20px;
+    border: 2px solid rgba(166, 62, 100);
+
+    box-shadow: 0 8px 25px rgba(166, 62, 100);
+    width: 80%;
+    margin: 60px auto;
+    color: #fff5f7;
+}
+
+.Search h2 {
+    font-size: 2rem;
+    color: rgba(166, 62, 100);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255,190,210,0.6);
+}
+
+.Search .hint {
+    color: rgba(166, 62, 100,0.5);
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.SearchBox {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(255, 190, 210, 0.25);
+    margin-bottom: 40px;
+    border: 1px solid rgba(166, 62, 100,0.5);
+
+}
+
+.SearchInput {
+    border: none;
+    padding: 14px 20px;
+    width: 350px;
+    outline: none;
+    background: transparent;
+    color: rgba(166, 62, 100,0.5);
+    font-size: 1rem;
+}
+
+.SearchInput::placeholder {
+    color: #ffe9ef;
+    opacity: 0.8;
+}
+
+.SearchButton {
+    background: #d46282;
+    border: none;
+    color: #fff;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.SearchButton:hover {
+    background: #a63e64;
+    transform: scale(1.05);
+}
+.FilterBox {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #a63e64;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 25px rgba(166, 62, 100, 0.5);
+    width: 85%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.FilterBox h3 {
+    color: #a63e64;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.FilterSelect {
+    background: #a63e64;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.FilterSelect:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ApplyFilter {
+    background: linear-gradient(135deg, #d46282, #a63e64);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.ApplyFilter:hover {
+    background: linear-gradient(135deg, #e78ca8, #d46282);
+    transform: translateY(-3px);
+}
 
 .hero {
     width: 100%;
@@ -292,9 +235,7 @@ CategoriesBooksCard {
 
     padding-top: 50px;
 }
-.BooksSectionBo a{
-    text-decoration: none;
-}
+
 .BooksSection {
     width: 90%;
     max-width: 1500px;
@@ -313,12 +254,16 @@ CategoriesBooksCard {
     width: 90%;
     max-width: 1500px;
     text-align: center;
-    box-shadow: 0 4px 30px #e8d6e2;
-    border-radius: 20px;
-    background: linear-gradient( rgba(198, 118, 144, 1), rgba(212, 98, 130, 0.3), rgba(166, 62, 100));
 
-    height: auto;
+    border-radius: 20px;
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);
+    background:linear-gradient(135deg, rgba(231, 140, 168, 0.5), rgba(212, 98, 130, 0.5), rgba(166, 62, 100, 0.5));
+    height:auto;
     padding-top: 50px;
+    margin: 50px auto;
+    padding-bottom: 50px;
+    border:2px solid #a63e64;
 }
 .BooksSectionSales a {
     text-decoration: none;
@@ -326,8 +271,8 @@ CategoriesBooksCard {
 
 
 .SectionTitle {
-    font-size: 2rem;
-    color: #ffdce4;
+    font-size:3rem;
+    color: rgba(255, 255, 255, 0.8);
     text-shadow: 0 0 10px rgba(255, 190, 210, 0.6);
     margin-bottom: 30px;
 }
@@ -542,13 +487,13 @@ CategoriesBooksCard {
     flex-wrap: wrap;
     gap: 30px;
     margin-top: 40px;
-    margin-bottom: 20px;
 }
 
 .SaleCard {
     width: 230px;
-    background: rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    height: 350px;
+    background: rgba(166, 62, 100, 0.3);
+    border: 1px solid #a63e64;
     border-radius: 20px;
     padding: 20px;
     color: #fff;

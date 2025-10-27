@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(135deg, #e78ca8, #d46282, #a63e64);
+    background-color:  #FDE1DF;
     min-height: 100vh;
 
 }
@@ -22,8 +22,9 @@ body {
 .Books {
     width: 250px;
     min-height: 350px;
-    background-color: rgba(255, 255, 255, 0.15);
-    border: 1px solid white;
+    background: linear-gradient(135deg, rgba(231, 140, 168, 0.5), rgba(212, 98, 130, 0.5), rgba(166, 62, 100, 0.5));
+    border: #d46282 solid 2px;
+    box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);
     border-radius: 20px;
     padding: 15px;
     display: flex;
@@ -31,8 +32,8 @@ body {
     align-items: center;
     justify-content: flex-start;
     text-align: center;
-    color: white;
-    box-shadow: 0 0 10px rgba(255,255,255,0.3);
+    color: #785551;
+    /*box-shadow: 0 0 10px rgba(255,255,255,0.3);*/
     transition: 0.3s ease;
 }
 
