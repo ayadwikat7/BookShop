@@ -1,0 +1,109 @@
+.AuthorCard {
+    background: linear-gradient(145deg, #fde1df, #f7c7cf, #f3b1bb);
+    width: 60%;
+    margin: 60px auto;
+    border-radius: 25px;
+    box-shadow: 0 4px 15px rgba(166, 62, 100) ;
+    display: flex;
+    align-items: center;
+    gap: 30px;
+    padding: 40px 60px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(166, 62, 100);
+}
+
+.AuthorCard:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 35px rgba(166, 62, 100, 0.6);
+}
+
+.AuthorImage {
+    width: 200px;
+    height: auto;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid #fff;
+    box-shadow: 0 4px 15px rgba(166, 62, 100);
+}
+
+.AuthorContent {
+    color: #4a2f3d;
+    flex: 1;
+    text-align: left;
+}
+
+.AuthorName {
+    font-size: 1.8rem;
+    color: #a63e64;
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255, 180, 200, 0.4);
+}
+
+
+.AuthorStats {
+    display: flex;
+    gap: 40px;
+    margin-bottom: 15px;
+    font-size: 1rem;
+    color: #70394f;
+}
+
+.AuthorStats i {
+    color: #a63e64;
+    margin-right: 8px;
+}
+
+/* التقييم */
+.AuthorRating {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 20px;
+}
+
+.AuthorRating i {
+    color: #FFD580;
+    font-size: 1.1rem;
+}
+
+.AuthorRating span {
+    color: #a63e64;
+    margin-left: 10px;
+    font-weight: 600;
+}
+
+/* نبذة الكاتب */
+.AuthorBio {
+    color: #6f4655;
+    font-size: 0.95rem;
+    line-height: 1.7;
+    max-width: 600px;
+}
+
+.AuthorBio strong {
+    color: #a63e64;
+}
+
+/* متجاوب للشاشات الصغيرة */
+@media (max-width: 768px) {
+    .AuthorCard {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px;
+        width: 90%;
+    }
+
+    .AuthorImage {
+        width: 130px;
+        height: 130px;
+    }
+
+    .AuthorStats {
+        justify-content: center;
+        gap: 20px;
+    }
+}
+
+a{
+    text-decoration: none;
+}

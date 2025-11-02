@@ -23,6 +23,9 @@ body {
     justify-content: center;
     align-items: center;
 }
+.AllItems a{
+    text-decoration: none;
+}
 .LoginItem{
     display: flex;
     flex-direction: column;

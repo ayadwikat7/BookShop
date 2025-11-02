@@ -2,9 +2,259 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Title</title>
+    <title>Authors</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="cssfolder/Authors.css">
+    <link rel="stylesheet" href="cssfolder/header.css">
+    <link rel="stylesheet" href="cssfolder/footer.css">
+<!--    <link rel="stylesheet" href="cssfolder/AllBooks.css">-->
+    <link rel="stylesheet" href="cssfolder/CategoriesStyle.css">
+    <link rel="stylesheet" href="cssfolder/CategoriesDeatiles.css">
 </head>
 <body>
+<div class="main">
+    <header class="header">
+        <div class="top-bar">
+            <p>📚 Free shipping on orders over $50 | Discover your next great read today!</p>
+        </div>
 
+        <div class="nav-container">
+            <div class="logo">
+                <i class="fa-solid fa-book-bookmark"></i>
+                <h1>BookShop</h1>
+            </div>
+
+            <!--            <div class="search-bar">-->
+            <!--                <input type="text" class="in" placeholder="Search for books, authors, or genres...">-->
+            <!--                <button><i class="fa-solid fa-magnifying-glass"></i></button>-->
+            <!--            </div>-->
+
+            <div class="user-icons">
+                <a href="favorite.html"> <i class="fa-solid fa-heart"></i></a>
+                <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
+                <a href="Profile.html"><i class="fa-solid fa-user"></i></a>
+
+            </div>
+        </div>
+
+        <nav class="menu">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="AllBooks.html">Books</a></li>
+                <li><a href="Categories.html">Categories</a></li>
+                <!--                <li><a href="#">Best Sellers</a></li>-->
+                <li><a href="Author.html">Authors</a></li>
+                <li><a href="ContactUs.html">Contact Us</a></li>
+            </ul>
+        </nav>
+    </header>
+
+
+    <!--    <section class="hero">-->
+    <!--        <div class="overlay">-->
+    <!--            <div class="textBox">-->
+    <!--                <h1>Welcome to Book Shop</h1>-->
+    <!--                <p>Your world of stories begins here</p>-->
+    <!--                <a href="LoginPage.html"> <button class="Login">Login To Your Account</button></a>-->
+    <!--                <a href="Register.html"> <button class="CreateAccount">Create A New Account</button></a>-->
+    <!--            </div>-->
+    <!--        </div>-->
+    <!--    </section>-->
+
+</div>
+<div class="Search">
+    <h2>🔍 Search By Name of Author</h2>
+    <p class="hint">Write the name of a Author or use filters below to refine your search</p>
+
+    <div class="SearchBox">
+        <input type="text" class="SearchInput" placeholder="Search for a category...">
+        <button class="SearchButton"><i class="fa-solid fa-magnifying-glass"></i></button>
+    </div>
+
+    <div class="FilterBox">
+        <h3>🎯 Filter Options</h3>
+        <div class="filters">
+            <select class="FilterSelect">
+                <option selected disabled>Find by Category</option>
+                <option>Business</option>
+                <option>Technology</option>
+                <option>Health</option>
+                <option>Fiction</option>
+                <option>Self-Development</option>
+            </select>
+
+            <select class="FilterSelect">
+                <option selected disabled>Sort By</option>
+                <option>Most Popular</option>
+                <option>Newest</option>
+                <option>Oldest</option>
+                <option>Highest Rated</option>
+            </select>
+            <select class="FilterSelect">
+                <option selected disabled>Find by Range Number of Book</option>
+                <option>1-5</option>
+                <option>6-10</option>
+                <option>11-15</option>
+                <option>>16</option>
+            </select>
+
+
+        </div>
+        <button class="ApplyFilter"><i class="fa-solid fa-filter"></i> Apply Filters</button>
+    </div>
+</div>
+
+<a href="AothorBook.html"><div class="AuthorCard">
+    <img src="imge/Authers/James.jpg" alt="Author Photo" class="AuthorImage">
+
+    <div class="AuthorContent">
+        <h2 class="AuthorName">James Clear</h2>
+
+        <div class="AuthorStats">
+            <p><i class="fa-solid fa-book"></i> Books Written: <strong>5</strong></p>
+            <p><i class="fa-solid fa-user"></i> Age: <strong>38</strong></p>
+        </div>
+
+        <div class="AuthorRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>4.5 / 5</span>
+        </div>
+
+        <p class="AuthorBio">
+            James Clear is an author and speaker best known for his bestselling book
+            <strong>"Atomic Habits"</strong>. His work focuses on building better habits,
+            decision-making, and continuous improvement. Through his clear writing,
+            he inspires millions worldwide to pursue growth and purpose.
+        </p>
+    </div>
+</div></a>
+<a href="AothorBook.html"><div class="AuthorCard">
+    <img src="imge/Authers/James.jpg" alt="Author Photo" class="AuthorImage">
+
+    <div class="AuthorContent">
+        <h2 class="AuthorName">James Clear</h2>
+
+        <div class="AuthorStats">
+            <p><i class="fa-solid fa-book"></i> Books Written: <strong>5</strong></p>
+            <p><i class="fa-solid fa-user"></i> Age: <strong>38</strong></p>
+        </div>
+
+        <div class="AuthorRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>4.5 / 5</span>
+        </div>
+
+        <p class="AuthorBio">
+            James Clear is an author and speaker best known for his bestselling book
+            <strong>"Atomic Habits"</strong>. His work focuses on building better habits,
+            decision-making, and continuous improvement. Through his clear writing,
+            he inspires millions worldwide to pursue growth and purpose.
+        </p>
+    </div>
+</div></a>
+<a href="AothorBook.html"><div class="AuthorCard">
+    <img src="imge/Authers/James.jpg" alt="Author Photo" class="AuthorImage">
+
+    <div class="AuthorContent">
+        <h2 class="AuthorName">James Clear</h2>
+
+        <div class="AuthorStats">
+            <p><i class="fa-solid fa-book"></i> Books Written: <strong>5</strong></p>
+            <p><i class="fa-solid fa-user"></i> Age: <strong>38</strong></p>
+        </div>
+
+        <div class="AuthorRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>4.5 / 5</span>
+        </div>
+
+        <p class="AuthorBio">
+            James Clear is an author and speaker best known for his bestselling book
+            <strong>"Atomic Habits"</strong>. His work focuses on building better habits,
+            decision-making, and continuous improvement. Through his clear writing,
+            he inspires millions worldwide to pursue growth and purpose.
+        </p>
+    </div>
+</div></a>
+<a href="AothorBook.html"><div class="AuthorCard">
+    <img src="imge/Authers/James.jpg" alt="Author Photo" class="AuthorImage">
+
+    <div class="AuthorContent">
+        <h2 class="AuthorName">James Clear</h2>
+
+        <div class="AuthorStats">
+            <p><i class="fa-solid fa-book"></i> Books Written: <strong>5</strong></p>
+            <p><i class="fa-solid fa-user"></i> Age: <strong>38</strong></p>
+        </div>
+
+        <div class="AuthorRating">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star-half-stroke"></i>
+            <i class="fa-regular fa-star"></i>
+            <span>4.5 / 5</span>
+        </div>
+
+        <p class="AuthorBio">
+            James Clear is an author and speaker best known for his bestselling book
+            <strong>"Atomic Habits"</strong>. His work focuses on building better habits,
+            decision-making, and continuous improvement. Through his clear writing,
+            he inspires millions worldwide to pursue growth and purpose.
+        </p>
+    </div>
+</div></a>
+<div class="pagination-container">
+    <button class="page-btn prev">« Previous Page</button>
+    <span class="page-number">Page <strong>1</strong></span>
+    <button class="page-btn next">Next Page »</button>
+</div>
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>Book Shop is your online destination for books, eBooks, and more.
+                Discover best sellers, classics, and hidden gems across all genres.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h3>Get In Touch</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Nablus, Palestine</p>
+            <p><i class="fa-solid fa-envelope"></i> contact@bookshop.com</p>
+            <p><i class="fa-solid fa-phone"></i> +970 599 123 456</p>
+            <div class="socials">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Book Shop | Designed by Aya Dwikat 💗</p>
+    </div>
+</footer>
 </body>
 </html>

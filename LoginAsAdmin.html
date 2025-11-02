@@ -2,8 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Login</title>
-
+    <title>Admin</title>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -11,9 +10,9 @@
     <link rel="stylesheet" href="cssfolder/headerSecond.css">
     <link rel="stylesheet" href="cssfolder/loginStyle.css">
     <link rel="stylesheet" href="cssfolder/footer.css">
+    <link rel="stylesheet" href="cssfolder/Admin.css">
 </head>
-<body>
-<header class="header">
+<body><header class="header">
     <div class="top-bar">
         <p>📚 Free shipping on orders over $50 | Discover your next great read today!</p>
     </div>
@@ -24,10 +23,10 @@
             <h1>BookShop</h1>
         </div>
 
-        <div class="search-bar">
-            <input type="text" placeholder="Search for books, authors, or genres...">
-            <button><i class="fa-solid fa-magnifying-glass"></i></button>
-        </div>
+<!--        <div class="search-bar">-->
+<!--            <input type="text" placeholder="Search for books, authors, or genres...">-->
+<!--            <button><i class="fa-solid fa-magnifying-glass"></i></button>-->
+<!--        </div>-->
 
         <div class="user-icons">
             <a href="favorite.html"><i class="fa-solid fa-heart"></i></a>
@@ -39,35 +38,29 @@
     <nav class="menu">
         <ul>
             <li><a href="index.html">Home</a></li>
-<!--            <li><a href="#">Books</a></li>-->
-<!--            <li><a href="#">Categories</a></li>-->
-<!--            <li><a href="#">Best Sellers</a></li>-->
-<!--            <li><a href="#">Authors</a></li>-->
+<!--                        <li><a href="#">Books</a></li>-->
+<!--                        <li><a href="#">Categories</a></li>-->
+<!--                        <li><a href="#">Best Sellers</a></li>-->
+<!--                        <li><a href="#">Authors</a></li>-->
             <li><a href="ContactUs.html">Contact Us</a></li>
         </ul>
     </nav>
 </header>
-    <div class="AllItems">
+    <div class="Admin">
+        <img src="imge/Admin.png" alt="Books">
 
-        <div class="login" >
-            <h2>Enter your information to continue</h2>
-            <div class="LoginItem">
-                <p>Email :</p>
-                <input type="email" placeholder="Enter Your Email " class="input">
+        <div class="AdminBox">
+            <h1>Welcome Again to Your Account </h1>
+            <p>Login As Admin</p>
+            <input type="text" placeholder="Enter Your Code to Continue ...">
+            <button>Login to Your Account</button>
+            <p>Or Login By :</p>
+            <div class="socials">
+
+                <img src="imge/Linkedin.png" alt="Linkedin">
+                <img src="imge/facebook.png" alt="Facebook">
+                <img src="imge/GitHub.png" alt="Twitter">
             </div>
-            <div class="LoginItem">
-                <p>Password :</p>
-                <input type="password" placeholder="Enter Your Password " class="input">
-            </div>
-            <div class="checkboxLable">
-                <input type="checkbox" placeholder="Remember me" >
-                <button class="lablebu">Forget Password</button>
-            </div>
-
-
-                <button  class="facebook"><i class="fa-brands fa-square-facebook color1"></i> by Facebook Account</button>
-            <a href="LoginAsAdmin.html"> <button  class="facebook">Are You Admin ? Click here</button></a>
-
         </div>
 
     </div>

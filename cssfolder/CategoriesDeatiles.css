@@ -139,6 +139,7 @@
 .stars {
     color: #FFD580;
     margin-top: 5px;
+    margin-bottom: 10px;
 }
 
 .CategoriesSection {
@@ -263,6 +264,7 @@
     transition: all 0.3s ease;
     position: relative;
     backdrop-filter: blur(10px);
+    /*margin-bottom: 20px;*/
 }
 
 .SaleCard:hover {
@@ -332,14 +334,16 @@
 }
 /* ===== Pagination Styling ===== */
 .pagination-container {
+
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 15px;
-    margin-top: 50px;
+
 }
 
 .page-btn {
+    padding: 20px;
     background-color: #a63e64;
     color: #fff;
     border: none;
