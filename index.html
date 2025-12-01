@@ -12,8 +12,13 @@
     <link rel="stylesheet" href="cssfolder/indexStyle.css">
     <link rel="stylesheet" href="cssfolder/header.css">
     <link rel="stylesheet" href="cssfolder/footer.css">
+    <script src="Js/Scroll.js"></script>
+
+
+
 </head>
 <body>
+
 <div class="main">
 <header class="header">
     <div class="top-bar">
@@ -23,7 +28,7 @@
     <div class="nav-container">
         <div class="logo">
             <i class="fa-solid fa-book-bookmark"></i>
-            <h1>Book Shop</h1>
+            <h1>BookShop</h1>
         </div>
 
         <div class="search-bar">
@@ -49,6 +54,7 @@
             <li><a href="#Recommended">Recommend for You</a></li>
             <li><a href="#Sales">Sales</a></li>
             <li><a href="ContactUs.html">Contact Us</a></li>
+            <li><a href="LoginAsAdmin.html">Admin?</a></li>
         </ul>
     </nav>
 </header>
@@ -57,11 +63,17 @@
     <section class="hero">
         <div class="overlay">
             <div class="textBox">
-                <h1>Welcome to Book Shop</h1>
+                <h1>Welcome to BookShop</h1>
                 <p>Your world of stories begins here</p>
                 <a href="LoginPage.html"> <button class="Login">Login To Your Account</button></a>
                 <a href="Register.html"> <button class="CreateAccount">Create A New Account</button></a>
             </div>
+            <div class="scroll-indicator" onclick="scrollDown()">
+                <i class="fa-solid fa-angles-down"></i>
+            </div>
+
+
+
         </div>
     </section>
 
@@ -149,58 +161,37 @@
 
 <div class="Author">
 
-    <div class="col">
-        <h1>Click on the author's image to view his works. </h1>
-        <div class="hor">
-            <a href="DetalisPsge.html" class="aunco"><div class="AuthorCard">
-            <img src="imge/Authers/Autherone.png" alt="RichDadBooks" class="imgeBook">
-            <h2>
-                Name : Robert Kiyosaki
-            </h2>
-            <p>
-                Number of books :more than 26
-            </p>
-            <div class="stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
+    <section id="AuthorsShowcase" class="hero-author">
+
+        <div class="AuthorBlock reveal">
+            <div class="author-img"><img src="imge/Authers/Autherone.png"></div>
+            <div class="author-info">
+                <p class="hello">HELLO! I'M</p>
+                <h1 class="name">Robert <span>Kiyosaki</span></h1>
+                <h3 class="role">Author, Investor & Speaker</h3>
+                <p class="bio">One Man. One Mission...</p>
+
+                <a href="AothorBook.html" class="read-btn">Read Bio →</a>
+                <button class="scrollNext" onclick="scrollToNext()">↓ Scroll</button>
             </div>
-        </div></a>
-            <a href="DetalisPsge.html" class="aunco"><div class="AuthorCard">
-                <img src="imge/Authers/Autherone.png" alt="RichDadBooks" class="imgeBook">
-                <h2>
-                    Name : Robert Kiyosaki
-                </h2>
-                <p>
-                    Number of books :more than 26
-                </p>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-            </div></a>
-            <a href="DetalisPsge.html" class="aunco"><div class="AuthorCard">
-                <img src="imge/Authers/Autherone.png" alt="RichDadBooks" class="imgeBook">
-                <h2>
-                    Name : Robert Kiyosaki
-                </h2>
-                <p>
-                    Number of books :more than 26
-                </p>
-                <div class="stars">
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                    <i class="fa-solid fa-star"></i>
-                </div>
-            </div></a></div>
-    </div>
+        </div>
+
+        <div class="AuthorBlock reveal">
+            <div class="author-img"><img src="imge/Authers/Autherone.png"></div>
+            <div class="author-info">
+                <p class="hello">HELLO! I'M</p>
+                <h1 class="name">Robert <span>Kiyosaki</span></h1>
+                <h3 class="role">Author, Investor & Speaker</h3>
+                <p class="bio">One Man. One Mission...</p>
+
+                <a href="DetalisPsge.html" class="read-btn">Read Bio →</a>
+                <button class="scrollNext" onclick="scrollToNext()">↓ Scroll</button>
+            </div>
+        </div>
+
+    </section>
+
+
 
 
 
@@ -211,10 +202,11 @@
 <div  class="SecondBackGround">
 
     <section  class="hero">
-
+        <h2 class="SectionTitle">📚 Popular Books</h2>
+        <h3 data-link="Categories.html" class="clickToshow">Click to show all Books</h3>
         <div class="BooksSectionBo">
-            <h2 class="SectionTitle">📚 Popular Books</h2>
-            <div class="BooksCarousel">
+
+            <div class="BooksCarousel" id="loopCarousel">
 
                 <a href="DetalisPsge.html"><div class="BookCard">
                     <img src="imge/RichDadPoorDad.jpg" alt="">
@@ -266,149 +258,35 @@
                         <i class="fa-regular fa-star"></i>
                     </div>
                 </div></a>
-                <a href="AllBooks.html"> <div class="ShowMore">
-                    <p>Click To Show More Book</p>
-                    <i class="fa-solid fa-angles-right"></i>
-                </div></a>
+<!--                <a href="AllBooks.html"> <div class="ShowMore">-->
+<!--                    <p>Click To Show More Book</p>-->
+<!--                    <i class="fa-solid fa-angles-right"></i>-->
+<!--                </div></a>-->
 
             </div>
         </div>
+        <h2 class="SectionTitle">🧭 Categories</h2>
+        <h3  data-link="Categories.html" class="clickToshow">click to show all categories</h3>
+        <div id="CategoriesSection" class="CategoriesSection">
 
-        <div class="CategoriesSection">
-            <h2 class="SectionTitle">🧭 Categories</h2>
-            <div class="CategoriesGrid">
-                <a href="CategoryDeatlies.html"> <div class="SaleCard">
-                    <!--            <div class="discount-badge">-30%</div>-->
-                    <img src="imge/categories/Cat1.jpg" alt="Book Image">
-                    <h2>Personal Growth & Mindset</h2>
-                    <p>Unlock your potential with inspiring books that help you grow, think positively, and transform your life.
-                    </p>
-                    <!--            <div class="price">-->
-                    <!--                <span class="old">$20.00</span>-->
-                    <!--                <span class="new">$14.00</span>-->
-                    <!--            </div>-->
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star-half-stroke"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                </div></a>
-                <a href="CategoryDeatlies.html"> <div class="SaleCard">
-                    <!--            <div class="discount-badge">-50%</div>-->
-                    <img src="imge/categories/Cat2.jpg" alt="Book Image">
-                    <h2>Technology & Innovation</h2>
-                    <p>Dive into the future with books about coding, artificial intelligence, and the digital revolution.
-                    </p>
-                    <div class="price">
-                        <!--                <span class="old">$18.00</span>-->
-                        <!--                <span class="new">$9.00</span>-->
-                    </div>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                </div></a>
-                <a href="CategoryDeatlies.html"> <div class="SaleCard">
-                    <!--            <div class="discount-badge">-50%</div>-->
-                    <img src="imge/categories/Cat3.jpg" alt="Book Image">
-                    <h2>Business & Finance</h2>
-                    <p>Master the art of success through books that teach leadership, entrepreneurship, and financial freedom.
-                    </p>
-                    <div class="price">
-                        <!--                <span class="old">$18.00</span>-->
-                        <!--                <span class="new">$9.00</span>-->
-                    </div>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-regular fa-star"></i>
-                    </div>
-                </div></a>
-                <a href="CategoryDeatlies.html"><div class="SaleCard">
-                    <!--            <div class="discount-badge">-40%</div>-->
-                    <img src="imge/categories/Cat4.jpg" alt="Book Image">
-                    <h2>Health & Wellness</h2>
-                    <p>Nourish your body and mind with books on healthy living, mindfulness, and inner peace.
-                    </p>
-                    <div class="price">
-                        <!--                <span class="old">$22.00</span>-->
-                        <!--                <span class="new">$13.20</span>-->
-                    </div>
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div></a>
-                <a href="CategoryDeatlies.html"><div class="SaleCard">
-                    <!--            <div class="discount-badge">-40%</div>-->
-                    <img src="imge/categories/Cat5.jpg" alt="Book Image">
-                    <h2>Art & Creativity</h2>
-                    <p>Explore imagination and beauty through books that celebrate art, color, and creative expression.
-                    </p>
-                    <!--            <div class="price">-->
-                    <!--                <span class="old">$22.00</span>-->
-                    <!--                <span class="new">$13.20</span>-->
-                    <!--            </div>-->
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div></a>
-                <a href="CategoryDeatlies.html"> <div class="SaleCard">
-                    <!--            <div class="discount-badge">-40%</div>-->
-                    <img src="imge/categories/Cat6.jpeg" alt="Book Image">
-                    <h2>History & Biography</h2>
-                    <p>Discover powerful life stories and key moments in history that shaped our world.
-                    </p>
-                    <!--            <div class="price">-->
-                    <!--                <span class="old">$22.00</span>-->
-                    <!--                <span class="new">$13.20</span>-->
-                    <!--            </div>-->
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div></a>
-                <a href="CategoryDeatlies.html"><div class="SaleCard">
-                    <!--            <div class="discount-badge">-40%</div>-->
-                    <img src="imge/categories/Cat7.jpg" alt="Book Image">
-                    <h2>Cooking & Food</h2>
-                    <p>Delicious recipes and kitchen tips to inspire healthy, flavorful cooking every day</p>
-                    <!--            <div class="price">-->
-                    <!--                <span class="old">$22.00</span>-->
-                    <!--                <span class="new">$13.20</span>-->
-                    <!--            </div>-->
-                    <div class="stars">
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                        <i class="fa-solid fa-star"></i>
-                    </div>
-                </div></a>
-                <a href="Categories.html">
-                    <div class="ShowMore">
-                    <p>Click To Show All Category</p>
-                    <i class="fa-solid fa-angles-right"></i>
-                </div></a>
+
+            <div id="CategoriesCarousel" class="CategoriesCarousel3D">
+
+
+                 <div class="CatCard" data-link="Categories.html"><img src="imge/categories/Cat1.jpg"><h3>Personal Growth</h3></div>
+                <div class="CatCard"  data-link="Categories.html"><img src="imge/categories/Cat2.jpg"><h3>Technology & Innovation</h3></div>
+                <div class="CatCard"  data-link="Categories.html"><img src="imge/categories/Cat3.jpg"><h3>Business & Finance</h3></div>
+                <div class="CatCard"  data-link="Categories.html"><img src="imge/categories/Cat4.jpg"><h3>Health & Wellness</h3></div>
+                <div class="CatCard"  data-link="Categories.html"><img src="imge/categories/Cat5.jpg"><h3>Art & Creativity</h3></div>
+                <div class="CatCard"  data-link="Categories.html"><img src="imge/categories/Cat6.jpeg"><h3>History & Biography</h3></div>
+                <div class="CatCard"  data-link="Categories.html"><img src="imge/categories/Cat7.jpg"><h3>Cooking & Food</h3></div>
+                 <div class="CatCard"  data-link="Categories.html"><img src="imge/categories/all.jpg"><h3>All Categories</h3></div>
+
             </div>
+
+
         </div>
+
 
     </section>
 
@@ -416,17 +294,14 @@
         <p>📖 Handpicked Books Just for You</p>
     </div>
 </div>
-<div  class="RecomandendBook">
-<!--    <div class="top-barSecond">-->
-<!--        <p>📖 Handpicked Books Just for You</p>-->
-<!--    </div>-->
+<div id ="BooksCarousel"  class="RecomandendBookindex">
 
     <section class="hero">
         <div class="BooksSection">
             <h2 class="SectionTitle">✨ Recommended Category For You</h2>
-            <div class="BooksCarousel">
+            <div id="recCarousel" class="BooksCarousel">
 
-                <a href="DetalisPsge.html"><div class="BookCard">
+             <div class="BookCard" data-link="CategoryDeatlies.html">
                     <img src="imge/kidsbook.png" alt="">
                     <h2>Atomic Habits</h2>
                     <p>by James Clear</p>
@@ -437,9 +312,9 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                     </div>
-                </div></a>
+                </div>
 
-                <a href="DetalisPsge.html"><div class="BookCard">
+               <div class="BookCard" data-link="CategoryDeatlies.html">
                     <img src="imge/categories/food.jpg" alt="">
                     <h2>The Power of Now</h2>
                     <p>by Eckhart Tolle</p>
@@ -450,9 +325,9 @@
                         <i class="fa-solid fa-star-half-stroke"></i>
                         <i class="fa-regular fa-star"></i>
                     </div>
-                </div></a>
+                </div>
 
-                <a href="DetalisPsge.html"><div class="BookCard">
+               <div class="BookCard" data-link="CategoryDeatlies.html">
                     <img src="imge/categories/math.avif" alt="">
                     <h2>The Alchemist</h2>
                     <p>by Paulo Coelho</p>
@@ -463,9 +338,8 @@
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                     </div>
-                </div></a>
-
-                <a href="DetalisPsge.html"><div class="BookCard">
+                </div>
+                <div class="BookCard" data-link="CategoryDeatlies.html">
                     <img src="imge/categories/Mystery1.jpg" alt="">
                     <h2>Deep Work</h2>
                     <p>by Cal Newport</p>
@@ -476,36 +350,26 @@
                         <i class="fa-regular fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                     </div>
-                </div></a>
+                </div>
 
-<!--                <a href="AllBooks.html">-->
-<!--                    <div class="ShowMore">-->
-<!--                        <p>Click To See All Recommended Books</p>-->
-<!--                        <i class="fa-solid fa-angles-right"></i>-->
-<!--                    </div>-->
-<!--                </a>-->
+              <div class="BookCard" data-link="CategoryDeatlies.html">
+                    <img src="imge/categories/Mystery1.jpg" alt="">
+                    <h2>Deep Work</h2>
+                    <p>by Cal Newport</p>
+                    <div class="stars">
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-solid fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                        <i class="fa-regular fa-star"></i>
+                    </div>
+                </div>
+
 
             </div>
         </div>
     </section>
 
-    <div class="whySection">
-        <h2 class="whyTitle">💫 Why These Books Are Recommended For You</h2>
-        <div class="whyContainer">
-            <div class="whyCard">
-                <h3>📚 Based on Popular Reader Choices</h3>
-                <p>These books are among the most loved and reviewed titles by readers looking to grow personally and professionally.</p>
-            </div>
-            <div class="whyCard">
-                <h3>🎯 Curated For Your Interests</h3>
-                <p>Our smart system recommends titles based on your favorite genres and previously viewed books.</p>
-            </div>
-            <div class="whyCard">
-                <h3>🌟 Quality Content You’ll Remember</h3>
-                <p>Every recommendation brings deep insights, emotional stories, and timeless lessons worth keeping.</p>
-            </div>
-        </div>
-    </div>
 </div>
 <div class="AuthorTap">
     <p>🔥 Hot Deals — Grab Your Favorite Books at Special Discounts!</p>
@@ -600,6 +464,13 @@
         </div>
     </section>
 </div>
+<!-- Popup Window -->
+<div id="popupBox" class="popup">
+    <div id="popupInner" class="popup-content">
+        <span id="closePopup">&times;</span>
+        <p id="popupMessage"></p>
+    </div>
+</div>
 
 <footer class="footer">
     <div class="footer-content">
@@ -637,7 +508,14 @@
     </div>
 </footer>
 
-
-    </div>
+<script src="Js/CreateAcountValidation.js"></script>
+<script src="Js/popMessage.js"></script>
+<script src="Js/WelcomeBookShop.js"></script>
+<script src="Js/RedfinedBook.js"></script>
+<script src="Js/SaleMotions.js"></script>
+<script src="Js/AuthorCard.js"></script>
+<script src="Js/Recomandedmotion.js"></script>
+<script src="Js/CategoryMoation.js"></script>
+<script src="Js/PopularBooks.js"></script>
 </body>
 </html>

@@ -1,9 +1,12 @@
 .Admin {
     display: flex;
     flex-direction: row;
-    /*justify-content: center;*/
-    /*align-items: center;*/
+    justify-content: center;
     color:  rgba(166, 62, 100);
+}
+.Admin img{
+    width: 20%;
+    height: auto;
 }
 
 .AdminBox {
@@ -21,10 +24,7 @@
     transition: transform 0.4s ease, box-shadow 0.4s ease;
 }
 
-.AdminBox:hover {
-    transform: translateY(-10px);
-    box-shadow: 2px 10px 60px rgba(214, 98, 130, 0.7);
-}
+
 
 .AdminBox input {
     width: 300px;
@@ -63,7 +63,7 @@
     transition: all 0.3s ease;
 }
 
-/* تأثير عند المرور على الزر */
+
 .AdminBox button:hover {
     background: linear-gradient(135deg, #ff6f91, #d46282);
     transform: translateY(-5px);
@@ -71,7 +71,7 @@
     color: white;
 }
 
-/* الأيقونات */
+
 .socials img {
     width: 40px;
     height: 40px;
@@ -82,9 +82,66 @@
     border: 1px solid #d46282;
 }
 
-/* تأثير على الأيقونات عند المرور */
 .socials img:hover {
     transform: translateY(-8px) scale(1.1);
     background: linear-gradient(135deg, #ff6f91, #d46282);
     box-shadow: 0px 8px 20px rgba(255, 111, 145, 0.6);
+}
+.AdminAvatar{
+    width: 400px;
+    animation: breathing 3s ease-in-out infinite;
+}
+@keyframes breathing{
+    0%{transform:scale(1);}
+    50%{transform:scale(1.04);}
+    100%{transform:scale(1);}
+}
+.popup{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content{
+    width: 350px;
+    padding: 25px;
+    border-radius: 12px;
+    text-align: center;
+    font-family: "Poppins";
+    color: #fff;
+    animation: fadeIn .4s ease;
+    font-size: 17px;
+}
+
+.success {
+    background: #28a745;
+    box-shadow: 0 0 15px rgba(24,142,50,0.8);
+}
+
+
+.error {
+    background: #e74c3c;
+    box-shadow: 0 0 15px rgba(200,50,50,0.9);
+}
+
+
+.warning {
+    background: #f39c12;
+    box-shadow: 0 0 15px rgba(243,156,18,0.85);
+}
+
+#closePopup{
+    float:right;
+    font-size:22px;
+    cursor:pointer;
+}
+
+@keyframes fadeIn{
+    from{ opacity:0; transform:scale(.8); }
+    to{ opacity:1; transform:scale(1); }
 }

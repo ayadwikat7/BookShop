@@ -1,0 +1,551 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Admin_Control</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <link rel="stylesheet" href="cssfolder/headerSecond.css">
+    <link rel="stylesheet" href="cssfolder/loginStyle.css">
+    <link rel="stylesheet" href="cssfolder/footer.css">
+    <link rel="stylesheet" href="cssfolder/Admin.css">
+    <link rel="stylesheet" href="cssfolder/AdminDashBoard.css">
+    <link rel="stylesheet" href="cssfolder/DialogStyle.css">
+    <script src="Js/DashBordScript.js"></script>
+</head>
+<body>
+<header class="header">
+    <div class="top-bar">
+        <p>📚 Free shipping on orders over $50 | Discover your next great read today!</p>
+    </div>
+
+    <div class="nav-container">
+        <div class="logo">
+            <i class="fa-solid fa-book-bookmark"></i>
+            <h1>BookShop</h1>
+        </div>
+
+        <!--        <div class="search-bar">-->
+        <!--            <input type="text" placeholder="Search for books, authors, or genres...">-->
+        <!--            <button><i class="fa-solid fa-magnifying-glass"></i></button>-->
+        <!--        </div>-->
+
+<!--        <div class="user-icons">-->
+<!--            <a href="favorite.html"><i class="fa-solid fa-heart"></i></a>-->
+<!--            <i class="fa-solid fa-cart-shopping"></i>-->
+<!--            <a href="Profile.html"><i class="fa-solid fa-user"></i></a>-->
+<!--        </div>-->
+    </div>
+
+    <nav class="menu">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <!--                        <li><a href="#">Books</a></li>-->
+            <!--                        <li><a href="#">Categories</a></li>-->
+            <!--                        <li><a href="#">Best Sellers</a></li>-->
+            <!--                        <li><a href="#">Authors</a></li>-->
+            <!--            <li><a href="ContactUs.html">Contact Us</a></li>-->
+        </ul>
+    </nav>
+</header>
+<div class="AdminTotal">
+    <div class="leftDiv">
+        <div class="AdminInfo">
+            <img src="imge/Admin.gif" alt="Books">
+            <h1>Welcome Admin</h1>
+            <button>Log Out</button>
+            <button>Add New Admin</button>
+        </div>
+        <div class="AdminButton">
+            <a href="index.html"><button>Home</button></a>
+            <a href="ViewAllUsers.html"><button>View all users</button></a>
+            <button>Enable user</button>
+            <button>Disable user</button>
+            <button>View one user</button>
+            <button>View last login</button>
+            <button>Track Customer Order</button>
+            <button>Contact the delivery company</button>
+            <button>View all orders</button>
+            <button>View one order</button>
+            <button>Express order</button>
+            <button>Deferred order</button>
+            <button>Cancelled order</button>
+
+
+        </div>
+    </div>
+    <div class="Contersection">
+        <div class="Conter">
+            <h3>Number of people visited website  </h3>
+            <div class="ConterBox">
+                <i class="fa-solid fa-people-group"></i>
+                <p>30 Visited</p>
+            </div>
+        </div>
+        <div class="Conter">
+            <h3>Number of people visited BookShop  </h3>
+            <div class="ConterBox">
+                <i class="fa-solid fa-people-roof"></i>
+                <p>30 Visited</p>
+            </div>
+        </div>
+        <div class="Conter">
+            <h3>Number of books in stock </h3>
+            <div class="ConterBox">
+                <i class="fa-solid fa-store"></i>
+                <p>30 Books</p>
+            </div>
+
+        </div>
+        <div class="Conter">
+            <h3>Number of books sold </h3>
+            <div class="ConterBox">
+                <i class="fa-solid fa-hand-holding-dollar"></i>
+                <p>30 Books</p>
+            </div>
+
+        </div>
+        <div class="Conter">
+            <h3>Number of returned books</h3>
+            <div class="ConterBox">
+                <i class="fa-solid fa-xmark"></i>
+                <p>30 Books</p>
+            </div>
+
+        </div>
+        <div class="Conter">
+            <h3>Number of books received</h3>
+            <div class="ConterBox">
+                <i class="fa-solid fa-check"></i>
+                <p>30 Books</p>
+            </div>
+
+        </div>
+        <div class="AllItemsProfile">
+<!--            <button class="imgeButton"><img src="imge/avatar.jpg" class="avatar" alt="YourProfile">-->
+<!--            </button>-->
+<!--            <h2 class="name">Aya Dwikat</h2>-->
+<!--            <p class="Email">AyaDwikat@gmail.com</p>-->
+            <div class="design">
+                <div class="infor">
+                    <button onclick="openAddBook()" class="buttopnprofile"><i class="fa-solid fa-plus"></i>Add new Book</button>
+                    <button onclick="openRemoveBook()" class="buttopnprofile"><i class="fa-solid fa-plus"></i>Remove Book</button>
+
+                </div>
+                <div class="infor">
+                    <button onclick="openAddAuthor()" class="buttopnprofile"><i class="fa-solid fa-user-plus"></i>Add New Author</button>
+                    <button onclick="openRemoveAuthor()" class="buttopnprofile"><i class="fa-solid fa-user-plus"></i>Remove Author</button>
+
+                </div>
+                <div class="infor">
+                    <button class="buttopnprofile" onclick="openAddCategory()"><i class="fa-solid fa-layer-group"></i>Add New Category</button>
+                    <button class="buttopnprofile" onclick="openRemoveCategory()"><i class="fa-solid fa-folder-minus"></i>Remove Category</button>
+                </div>
+                <div class="infor">
+                    <button class="buttopnprofile" onclick="openAddSales()"><i class="fa-solid fa-tag"></i>Add New Sales</button>
+                    <button class="buttopnprofile" onclick="document.getElementById('RemoveSale').showModal()"><i class="fa-solid fa-trash"></i>Remove Sales</button>
+                </div>
+
+                <div class="infor">
+                    <button class="buttopnprofile" onclick="openEditBook()"><i class="fa-solid fa-marker"></i>Edit Book</button>
+                    <button class="buttopnprofile" onclick="openEditAuthor()"><i class="fa-solid fa-user-pen"></i>Edit Author</button>
+                </div>
+                <div class="infor">
+                    <button class="buttopnprofile" onclick="openEditCategory()"><i class="fa-solid fa-marker"></i>Edit Category</button>
+                    <button class="buttopnprofile" onclick="openEditSales()"><i class="fa-solid fa-file-pen"></i>Edit Sales</button>
+                </div>
+                <div class="infor">
+                    <button class="buttopnprofile"><i class="fa-solid fa-file-lines"></i>View invoices</button>
+                    <button class="buttopnprofile"><i class="fa-solid fa-file-arrow-down"></i>download View as pdf</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</div>
+<dialog id="AddAuthor" class="DialogS">
+
+    <h2 class="DialogTitle" id="AuthorDialogTitle">Add Author</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Name Author:</label>
+                <input type="text" placeholder="Enter Author Name">
+            </div>
+
+            <div class="innerDiv">
+                <label>Code Author:</label>
+                <input type="text" placeholder="Enter Author Code">
+            </div>
+        </div>
+
+        <div class="dialogDiv CenterRow">
+            <label for="imgUpload" class="UploadImage">Upload Image</label>
+            <input type="file" id="imgUpload" accept="image/*">
+        </div>
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Age Author:</label>
+                <input type="number" placeholder="Enter Author Age">
+            </div>
+
+            <div class="innerDiv">
+                <label>Number of Books:</label>
+                <input type="number" placeholder="Enter Number of books">
+            </div>
+        </div>
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Related Category Code:</label>
+                <input type="text" placeholder="Enter Category Code">
+            </div>
+
+            <div class="innerDiv">
+                <label>Related Category Name:</label>
+                <input type="text" placeholder="Enter Category Name">
+            </div>
+        </div>
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="Submit" class="UploadBtn">Submit Author</label>
+            <input type="submit" id="Submit">
+
+            <label for="Cancel" class="CancelBtn">Cancel</label>
+            <input type="button" id="Cancel" onclick="document.getElementById('AddAuthor').close()">
+        </div>
+
+    </form>
+
+</dialog>
+<dialog id="AddBook" class="DialogS">
+
+    <h2 class="DialogTitle" id="BookDialogTitle">Add Book</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label >Name Book:</label>
+                <input type="text" placeholder="Enter Book Name">
+            </div>
+
+            <div class="innerDiv">
+                <label>Code Book:</label>
+                <input type="text" placeholder="Enter Book Code">
+            </div>
+        </div>
+
+        <div class="dialogDiv CenterRow">
+            <label for="imgUpload" class="UploadImage">Upload Image</label>
+            <input type="file" id="imgUploadBook" accept="image/*">
+        </div>
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Number of Page</label>
+                <input type="text" placeholder="Enter Number of page ">
+            </div>
+
+            <div class="innerDiv">
+                <label>Number of Section:</label>
+                <input type="number" placeholder="Enter Number of Section">
+            </div>
+        </div>
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Related Category Code:</label>
+                <input type="text" placeholder="Enter Category Code">
+            </div>
+
+            <div class="innerDiv">
+                <label>Related Category Name:</label>
+                <input type="text" placeholder="Enter Category Name">
+            </div>
+        </div>
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Related Author Code:</label>
+                <input type="text" placeholder="Enter Author Code">
+            </div>
+
+            <div class="innerDiv">
+                <label>Related Author Name:</label>
+                <input type="text" placeholder="Enter Author Name">
+            </div>
+        </div>
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="SubmitBook" class="UploadBtn">Submit Book</label>
+            <input type="submit" id="SubmitBook">
+
+            <label for="CancelBook" class="CancelBtn">Cancel</label>
+            <input type="button" id="CancelBook" onclick="document.getElementById('AddBook').close()">
+        </div>
+
+    </form>
+
+</dialog>
+<dialog id="RemoveBook" class="DialogS">
+
+    <h2 class="DialogTitle" id="RemoveTitleDialog">Remove Book</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Name Book:</label>
+                <input type="text" placeholder="Enter Author Name">
+            </div>
+
+            <div class="innerDiv">
+                <label>Code Book:</label>
+                <input type="number" placeholder="Enter Author Code">
+            </div>
+        </div>
+
+
+
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="ClickRemovebook" class="UploadBtn">Remove Book</label>
+            <input type="submit" id="ClickRemovebook">
+
+            <label for="CancelRemoveBook" class="CancelBtn">Cancel</label>
+            <input type="button" id="CancelRemoveBook" onclick="document.getElementById('RemoveBook').close()">
+        </div>
+
+    </form>
+
+</dialog>
+<dialog id="RemoveAuthor" class="DialogS">
+
+    <h2 class="DialogTitle">Remove Author</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Name Author:</label>
+                <input type="text" placeholder="Enter Author Name">
+            </div>
+
+            <div class="innerDiv">
+                <label>Code Author:</label>
+                <input type="number" placeholder="Enter Author Code">
+            </div>
+        </div>
+
+
+
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="ClickRemoveAuthor" class="UploadBtn">Remove Book</label>
+            <input type="submit" id="ClickRemoveAuthor">
+
+            <label for="CancelRemoveAuthor" class="CancelBtn">Cancel</label>
+            <input type="button" id="CancelRemoveAuthor" onclick="document.getElementById('RemoveAuthor').close()">
+        </div>
+
+    </form>
+
+</dialog>
+<dialog id="AddCategory" class="DialogS">
+
+    <h2 class="DialogTitle" id="CategoryDialogTitle">Add Category</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Name Category:</label>
+                <input type="text" placeholder="Enter Author Name">
+            </div>
+
+            <div class="innerDiv">
+                <label>Code Category:</label>
+                <input type="text" placeholder="Enter Author Code">
+            </div>
+        </div>
+
+        <div class="dialogDiv CenterRow">
+            <label for="imgUploadCategory" class="UploadImage">Upload Image</label>
+            <input type="file" id="imgUploadCategory" accept="image/*">
+        </div>
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Related Category Book</label>
+                <input type="number" placeholder="Enter # Related Category Book">
+            </div>
+
+            <div class="innerDiv">
+                <label>Related Category Author:</label>
+                <input type="number" placeholder="Enter # Related Author">
+            </div>
+        </div>
+
+
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="SubmitCategory" class="UploadBtn">Submit</label>
+            <input type="submit" id="SubmitCategory">
+
+            <label for="CancelCategory" class="CancelBtn">Cancel</label>
+            <input type="button" id="CancelCategory" onclick="document.getElementById('AddCategory').close()">
+        </div>
+
+    </form>
+
+</dialog>
+<dialog id="RemoveCategory" class="DialogS">
+
+    <h2 class="DialogTitle">Remove Category</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Name Category:</label>
+                <input type="text" placeholder="Enter Category Name">
+            </div>
+
+            <div class="innerDiv">
+                <label>Code Category:</label>
+                <input type="number" placeholder="Enter Category Code">
+            </div>
+        </div>
+
+
+
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="ClickRemoveCategory" class="UploadBtn">Remove Category</label>
+            <input type="submit" id="ClickRemoveCategory">
+
+            <label for="CancelRemoveCategory" class="CancelBtn">Cancel</label>
+            <input type="button" id="CancelRemoveCategory" onclick="document.getElementById('RemoveCategory').close()">
+        </div>
+
+    </form>
+
+</dialog>
+<dialog id="AddSale" class="DialogS">
+
+    <h2 class="DialogTitle" id="SalesDialogTitle">Add New Sale</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Sale ID:</label>
+                <input type="number" placeholder="Enter Sale ID">
+            </div>
+
+            <div class="innerDiv">
+                <label>Book Code:</label>
+                <input type="number" placeholder="Enter Book Code">
+            </div>
+        </div>
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Quantity:</label>
+                <input type="number" placeholder="Enter Quantity Sold">
+            </div>
+
+            <div class="innerDiv">
+                <label>Sale Price:</label>
+                <input type="number" placeholder="Enter Sale Price">
+            </div>
+        </div>
+
+
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Sale Date:</label>
+                <input type="date">
+            </div>
+        </div>
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="SubmitSale" class="UploadBtn">Submit</label>
+            <input type="submit" id="SubmitSale">
+
+            <label for="CancelSale" class="CancelBtn">Cancel</label>
+            <input type="button" id="CancelSale" onclick="document.getElementById('AddSale').close()">
+        </div>
+
+    </form>
+
+</dialog>
+<dialog id="RemoveSale" class="DialogS">
+
+    <h2 class="DialogTitle">Remove Sale</h2>
+
+    <form method="post">
+
+        <div class="dialogDiv">
+            <div class="innerDiv">
+                <label>Sale ID:</label>
+                <input type="text" placeholder="Enter Sale ID">
+            </div>
+        </div>
+
+        <div class="dialogDiv ButtonsRow">
+            <label for="ConfirmRemoveSale" class="UploadBtn">Remove Sale</label>
+            <input type="submit" id="ConfirmRemoveSale">
+
+            <label for="CancelRemoveSale" class="CancelBtn">Cancel</label>
+            <input type="button" id="CancelRemoveSale" onclick="document.getElementById('RemoveSale').close()">
+        </div>
+
+    </form>
+
+</dialog>
+
+<footer class="footer">
+    <div class="footer-content">
+        <div class="footer-section about">
+            <h3>About Us</h3>
+            <p>Book Shop is your online destination for books, eBooks, and more.
+                Discover best sellers, classics, and hidden gems across all genres.</p>
+        </div>
+
+        <div class="footer-section links">
+            <h3>Quick Links</h3>
+            <ul>
+                <li><a href="#">FAQs</a></li>
+                <li><a href="#">Privacy Policy</a></li>
+                <li><a href="#">Terms & Conditions</a></li>
+                <li><a href="#">Support</a></li>
+            </ul>
+        </div>
+
+        <div class="footer-section contact">
+            <h3>Get In Touch</h3>
+            <p><i class="fa-solid fa-location-dot"></i> Nablus, Palestine</p>
+            <p><i class="fa-solid fa-envelope"></i> contact@bookshop.com</p>
+            <p><i class="fa-solid fa-phone"></i> +970 599 123 456</p>
+            <div class="socials">
+                <i class="fa-brands fa-facebook-f"></i>
+                <i class="fa-brands fa-instagram"></i>
+                <i class="fa-brands fa-x-twitter"></i>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer-bottom">
+        <p>© 2025 Book Shop | Designed by Aya Dwikat 💗</p>
+    </div>
+</footer>
+
+</body>
+</html>

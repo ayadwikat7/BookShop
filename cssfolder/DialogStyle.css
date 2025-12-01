@@ -1,0 +1,94 @@
+.DialogS{
+
+
+    background: rgba(162, 66, 100, 0.5); /* نصف شفاف */
+
+    width: 35%;
+    border: 1px solid white;
+    border-radius: 20px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+    padding: 20px;
+    backdrop-filter: blur(5px);
+}
+
+/* العنوان */
+.DialogTitle{
+    text-align: center;
+    color: white;
+    margin: 0 0 20px 0;
+    font-size: 24px;
+}
+
+/* صف واحد */
+.dialogDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 10px;
+}
+
+.innerDiv{
+    margin: 10px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.DialogS div input{
+    width: 200px;
+    height: 25px;
+    border: 1px solid rgba(162, 66, 100);
+    border-radius: 10px;
+    padding: 5px;
+    box-shadow: 0 6px 12px rgba(0,0,0,0.2);
+}
+
+#imgUpload, #Submit, #Cancel,#imgUploadBook,
+#SubmitBook,#CancelBook,
+#imgUploadCategory,#SubmitCategory,#CancelCategory,
+#CancelRemoveBook,#ClickRemovebook,
+#CancelRemoveAuthor,#ClickRemoveAuthor,
+#CancelRemoveCategory,#ClickRemoveCategory,
+#SubmitSale,#CancelSale,
+#ConfirmRemoveSale,#CancelRemoveSale
+{
+    display: none;
+}
+
+.UploadImage,
+.UploadBtn,
+.CancelBtn {
+    width: 210px;
+    height: 40px;
+    background-color:rgba(162, 66, 100, 0.8);
+    color: white;
+    border-radius: 10px;
+    border: 1px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-weight: bold;
+    transition: .3s;
+
+}
+
+.UploadBtn {
+    background-color: rgba(162, 66, 100, 0.8);
+}
+
+.CancelBtn{
+    background-color: rgba(162, 66, 100, 0.8);
+}
+
+.UploadImage:hover,
+.UploadBtn:hover,
+.CancelBtn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.ButtonsRow {
+    gap: 20px;
+}

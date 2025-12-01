@@ -1,0 +1,320 @@
+.Contersection {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 40px;
+    margin-top: 10px;
+    flex-wrap:wrap;
+    /*flex-direction: column;*/
+
+}
+.centerdiv{
+    display: flex;
+    flex-direction: column;
+
+}
+.Conter {
+    width: 280px;
+    height: 160px;
+    background-color: rgba(162, 66, 100, 0.5);
+    border-radius: 15px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.Conter:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.25);
+}
+
+.Conter h3 {
+    font-size: 20px;
+    margin-bottom: 5px;
+    color: #fff;
+    text-align: center;
+}
+
+.ConterBox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.ConterBox i {
+    font-size: 28px;
+    color: #fff;
+}
+
+.Conter p {
+    text-align: center;
+    font-size: 17px;
+    font-weight: 500;
+    margin: 0;
+}
+
+.AdminTotal{
+    display: flex;
+    flex-direction: row;
+    gap: 100px;
+}
+
+
+.leftDiv {
+    width: 620px;
+    height:130vh;
+   background-color: rgba(162, 66, 100, 0.5);
+    border: 1px solid #ddd;
+    box-shadow: 2px 0 5px #d6547e;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 50px;
+    font-family: 'Poppins', sans-serif;
+    /*padding: 50px;*/
+}
+
+.AdminInfo {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.AdminInfo img {
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+    border: 2px solid #d6547e;
+}
+
+.AdminInfo h1 {
+    font-size: 18px;
+    color: white;
+    margin-bottom: 10px;
+}
+
+.AdminInfo button {
+    display: block;
+    width: 180px;
+    margin: 5px auto;
+    padding: 8px 0;
+    background-color: #FDE1DF;
+    color: #d6547e;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: background 0.3s;
+}
+
+.AdminInfo button:hover {
+    background-color: #d6547e;
+    color:#FDE1DF ;
+}
+
+.AdminButton {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    ;
+}
+.AdminButton a {
+
+    text-decoration: none;
+    width: 100%;
+    text-align: left;
+    margin-left: 18px;
+}
+.AdminButton button {
+    width: 90%;
+    background: none;
+    border: 1px solid #FDE1DF;
+    text-align: left;
+    padding: 10px 20px;
+    margin: 3px 0;
+    font-size: 15px;
+    color: white;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+}
+
+.AdminButton button:hover {
+    background-color: #FDE1DF ;
+    color:#d6547e ;
+    transform: translateX(5px);
+}
+
+.AdminButton button.active {
+    background-color: #FDE1DF ;
+    color:#d6547e ;
+}
+.Profile {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 0;
+}
+
+.AllItemsProfile {
+    width: 1000px;
+    height: auto;
+    border: 2px ;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 0;
+    background-color: rgba(162, 66, 100, 0.5);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+    position: relative;
+}
+
+
+
+
+
+.name {
+    margin-top: 30px;
+    color: white;
+    font-size: 22px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+.Email {
+    margin-top: 10px;
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    margin-bottom: 40px;
+}
+
+
+.design {
+    display: flex;
+    flex-direction: column;
+    gap: 35px;
+    margin-top: 40px;
+}
+
+
+.infor {
+    display: flex;
+    flex-direction: row;
+    gap: 35px;
+    justify-content: center;
+}
+
+
+.buttopnprofile,
+.buttopnprofileEdit {
+    border: 1px solid #d6547e;
+    border-radius: 20px;
+    width: 350px;
+    height: 55px;
+    font-size: 15px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+
+.buttopnprofile {
+    background-color: #FDE1DF;
+    color: #d6547e;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.buttopnprofile:hover {
+    transform: scale(1.05);
+    box-shadow: 0 5px 15px rgba(255, 255, 255, 0.4);
+    background-color: #d6547e;
+    color: #FDE1DF;
+}
+
+
+.buttopnprofileEdit {
+    background: white;
+    color: #a63e64;
+    font-weight: 600;
+    box-shadow: 0 3px 10px rgba(255, 255, 255, 0.3);
+}
+
+.buttopnprofileEdit:hover {
+    background: #ffe4ee;
+    transform: scale(1.05);
+}
+.top-bar{
+    color: white;
+    text-align: center;
+
+}
+
+
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 80px;
+}
+
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+
+
+
+.nav-links {
+    display: flex;
+    gap: 35px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0.9);
+    font-weight: 500;
+    font-size: 15px;
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
+    color: #fff;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.6);
+}
+
+
+.signout-btn {
+    background-color: rgba(255, 255, 255, 0.2);
+    border: none;
+    color: #fff;
+    padding: 8px 18px;
+    border-radius: 12px;
+    font-size: 14px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.signout-btn:hover {
+    background-color: rgba(255, 255, 255, 0.35);
+    transform: scale(1.05);
+}

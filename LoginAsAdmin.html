@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="cssfolder/footer.css">
     <link rel="stylesheet" href="cssfolder/Admin.css">
 </head>
-<body><header class="header">
+<body>
+<header class="header">
     <div class="top-bar">
         <p>📚 Free shipping on orders over $50 | Discover your next great read today!</p>
     </div>
@@ -22,11 +23,6 @@
             <i class="fa-solid fa-book-bookmark"></i>
             <h1>BookShop</h1>
         </div>
-
-<!--        <div class="search-bar">-->
-<!--            <input type="text" placeholder="Search for books, authors, or genres...">-->
-<!--            <button><i class="fa-solid fa-magnifying-glass"></i></button>-->
-<!--        </div>-->
 
         <div class="user-icons">
             <a href="favorite.html"><i class="fa-solid fa-heart"></i></a>
@@ -42,24 +38,30 @@
 <!--                        <li><a href="#">Categories</a></li>-->
 <!--                        <li><a href="#">Best Sellers</a></li>-->
 <!--                        <li><a href="#">Authors</a></li>-->
-            <li><a href="ContactUs.html">Contact Us</a></li>
+<!--            <li><a href="ContactUs.html">Contact Us</a></li>-->
         </ul>
     </nav>
 </header>
     <div class="Admin">
-        <img src="imge/Admin.png" alt="Books">
+        <img src="imge/Admin-amico.svg" alt="Books" class="AdminAvatar" >
 
         <div class="AdminBox">
             <h1>Welcome Again to Your Account </h1>
             <p>Login As Admin</p>
-            <input type="text" placeholder="Enter Your Code to Continue ...">
-            <button>Login to Your Account</button>
+            <input type="password" placeholder="Enter Your Code to Continue ...">
+            <a href="DapshBoard.html"> <button>Login to Your Account</button></a>
             <p>Or Login By :</p>
             <div class="socials">
 
                 <img src="imge/Linkedin.png" alt="Linkedin">
                 <img src="imge/facebook.png" alt="Facebook">
                 <img src="imge/GitHub.png" alt="Twitter">
+            </div>
+        </div>
+        <div id="popupBox" class="popup">
+            <div class="popup-content" id="popupInner">
+                <span id="closePopup">&times;</span>
+                <p id="popupMessage"></p>
             </div>
         </div>
 
@@ -99,5 +101,6 @@
         <p>© 2025 Book Shop | Designed by Aya Dwikat 💗</p>
     </div>
 </footer>
+<script src="Js/LoginAsAdmin.js"></script>
 </body>
 </html>
