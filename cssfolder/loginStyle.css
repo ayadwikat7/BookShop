@@ -3,39 +3,47 @@ body {
     min-height: 100vh;
 }
 
-/* === LOGIN BOX FIXED === */
-.login{
-    border: 1px solid #d46282;
-    border-radius: 20px;
-    display: flex;
-    flex-direction: column;
-    width: 450px;
-    min-height: 520px;
-    align-items: center;
-    padding: 25px 0;
-    margin-top: 40px;
-    color: #d46282;
-    gap: 10px;
-}
-
-
 .AllItems{
     display: flex;
     justify-content: center;
-    align-items: center;
-    width:100%;
+
+    width:30%;
+    border: 3px solid #d46282;            /* الإطار الزهري */
+    border-radius: 20px;
+    padding: 20px;
+    margin: 0 auto;
+}
+/* ===== Register Box (loginR) with Pink Border ===== */
+
+.loginREgister {
+
+    width: 600px;
+    min-height: 620px;
+    padding: 35px;
+    background: #fde8e6;                  /* نفس خلفية الموقع */
+    color: #d46282;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 0 15px rgba(162, 66, 100, 0.25);
 }
 
+
+.loginR {
+
+    color: #d46282;
+
+}
 .LoginItem{
     display: flex;
     flex-direction: column;
     gap: 5px;
-    width: 80%;
+    width: 100%;
 }
 
 .input {
     width: 100%;
-    height: 38px;
+    height: 45px;
     border-radius: 20px;
     border: 1px solid #d46282;
     background: linear-gradient(135deg, rgba(255,255,255,0.9), rgba(245,245,245,0.6));
@@ -43,9 +51,10 @@ body {
     padding: 5px 15px;
     box-shadow: 0 0 8px rgba(162, 66, 100, 0.6);
     font-family: 'Poppins', sans-serif;
-    font-size: 14px;
+    font-size: 16px;
     outline: none;
 }
+
 
 .checkboxLable{
     display: flex;
@@ -75,6 +84,7 @@ body {
     color:white;
     font-weight:600;
     margin-top: 10px;
+    margin-left: 13%;
     cursor: pointer;
 }
 
@@ -93,6 +103,7 @@ body {
     gap:10px;
     cursor:pointer;
     margin-top: 8px;
+    margin-left: 13%;
 }
 
 
@@ -108,4 +119,55 @@ body {
 }
 a{
     text-decoration: none;
+}
+.ClickHere{
+    color: #d46282;
+    text-decoration: underline;
+    cursor: pointer;
+
+
+
+}
+.ClickHere h3{
+    margin-left: 20%;
+}
+.ClickHere:hover{
+    color:black;
+}
+
+.popup{
+    position: fixed;
+    top:0; left:0;
+    width:100%; height:100%;
+    background:rgba(0,0,0,0.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:9999;
+}
+
+.popup-content{
+    background:#fff;
+    padding:25px;
+    width:350px;
+    border-radius:12px;
+    text-align:center;
+    box-shadow:0 0 15px rgba(0,0,0,0.3);
+    font-family:"Poppins";
+}
+
+/* للألوان حسب التحذير */
+.success{ background:#28a745; color:#fff; }
+.error{ background:#e74c3c; color:#fff; }
+.warning{ background:#f39c12; color:#fff; }
+
+#closePopup{ cursor:pointer; font-size:22px; float:right; }
+.clickToshow{
+    cursor:pointer;
+    color:white;
+    margin-bottom: 20px;
+    margin-top: 10px;
+}
+.clickToshow:hover{
+    color: #ffbed5;
 }

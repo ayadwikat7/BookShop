@@ -49,30 +49,37 @@
 </header>
     <div class="AllItems">
 
-        <div class="login" >
+        <div class="loginR" >
             <h2>Enter your information to continue</h2>
-            <div class="LoginItem">
-                <p>Email :</p>
-                <input type="email" placeholder="Enter Your Email " class="input">
-            </div>
-            <div class="LoginItem">
-                <p>Password :</p>
-                <input type="password" placeholder="Enter Your Password " class="input">
-            </div>
-            <div class="checkboxLable">
+            <form action="PHPFile/Login.php" method="post">
+                <div class="LoginItem">
+                    <p>Email :</p>
+                    <input name="Email" type="email" placeholder="Enter Your Email " class="input emailInput">
+                </div>
+                <div class="LoginItem">
+                    <p>Password :</p>
+                    <input type="password" name="Password" placeholder="Enter Your Password " class="input passwordInput">
+                </div>
+                <div class="checkboxLable">
 
-                <input type="checkbox" placeholder="Remember me" id="remember" >
-                <label for="remember">Remember me</label>
-                <button class="lablebu">Forget Password</button>
-            </div>
+                    <button class="lablebu">Forget Password</button>
+                </div>
 
-            <button class="mainLogin">Login</button>   <!-- 🔥 زر Login -->
+                <button class="mainLogin">Login</button>   <!-- 🔥 زر Login -->
                 <button  class="facebook"><i class="fa-brands fa-square-facebook color1"></i> by Facebook Account</button>
-            <a href="LoginAsAdmin.html"> <button  class="facebook">Are You Admin? Click here</button></a>
-
+                <a href="LoginAsAdmin.html"> <button  class="facebook">Are You Admin? Click here</button></a>
+            </form>
+            <a class="ClickHere" href="Register.html"><h3>Don't Have account? Create one </h3></a>
         </div>
 
     </div>
+<!-- Popup Window -->
+<div id="popupBox" class="popup">
+    <div id="popupInner" class="popup-content">
+        <span id="closePopup">&times;</span>
+        <p id="popupMessage"></p>
+    </div>
+</div>
 <footer class="footer">
     <div class="footer-content">
         <div class="footer-section about">
@@ -108,6 +115,32 @@
         <p>© 2025 Book Shop | Designed by Aya Dwikat 💗</p>
     </div>
 </footer>
+<script src="Js/popMessage.js"></script>
+
 <script src="Js/login.js"></script>
+<?php if(!empty($errorMsg)): ?>
+<script>
+    // Read error from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+    loginBtn.addEventListener("click", function(e) {
+
+        if (email.value.trim() === "" || pass.value.trim() === "") {
+            e.preventDefault();           // منع إرسال الفورم
+            showWarning("Please fill all fields ❗");
+            return;                       // وقف التنفيذ
+        }
+
+    });
+
+    // إذا في error → اعرض popup
+    if (error) {
+        showError(error);
+    }
+
+</script>
+
+<?php endif; ?>
+
 </body>
 </html>

@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="cssfolder/header.css">
     <link rel="stylesheet" href="cssfolder/loginStyle.css">
     <link rel="stylesheet" href="cssfolder/footer.css">
-    <link rel="stylesheet" href="cssfolder/Register.css">
+
 </head>
 <body>
 <header class="header">
@@ -52,27 +52,36 @@
 
     <div class="loginR" >
         <h2>Enter your information to continue</h2>
-        <div class="LoginItem">
-            <p>Email :</p>
-            <input type="email" placeholder="Enter Your Email " class="input">
-        </div>
-        <div class="LoginItem">
-            <p>Name :</p>
-            <input type="text" placeholder="Enter Your Name " class="input">
-        </div>
-        <div class="LoginItem">
-            <p>Password :</p>
-            <input type="password" placeholder="Enter Your Password " class="input">
-        </div>
-<!--        <div class="checkboxLable">-->
-<!--            <input type="checkbox" placeholder="Remember me" >-->
-<!--            <button class="lablebu">Forget Password</button>-->
-<!--        </div>-->
+        <form  action="PHPFile/UserRegister.php" method="post">
 
-        <button  class="facebook"><i class="fa-solid fa-right-to-bracket color2"></i>Create Account</button>
+            <div >
+                <p>Email :</p>
+                <input type="email" name="Email" placeholder="Enter Your Email" class="input">
+            </div>
 
-        <button  class="facebook"><i class="fa-brands fa-square-facebook color1"></i> by Facebook Account</button>
+            <div >
+                <p>Name :</p>
+                <input type="text" name="Name" placeholder="Enter Your Name" class="input">
+            </div>
 
+            <div >
+                <p>Password :</p>
+                <input type="password" name="Password" placeholder="Enter Your Password" class="input">
+            </div>
+
+            <div >
+                <p>Confirmed Password :</p>
+                <input type="password" name="ConifrmedPassword" placeholder="Confirm Password" class="input">
+            </div>
+
+            <button class="facebook">
+                <i class="fa-solid fa-right-to-bracket color2"></i>
+                Create Account
+            </button>
+            <button  class="facebook"><i class="fa-brands fa-square-facebook color1"></i> by Facebook Account</button>
+        </form>
+
+        <a class="ClickHere" href="LoginPage.html"><h3> Have account? Login here</h3></a>
     </div>
 </div>
 <footer class="footer">
@@ -110,5 +119,22 @@
         <p>© 2025 Book Shop | Designed by Aya Dwikat 💗</p>
     </div>
 </footer>
+<script>
+    // Read error from URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const error = urlParams.get('error');
+    loginBtn.addEventListener("click", function(e) {
+
+        if (email.value.trim() === "" || pass.value.trim() === "") {
+            e.preventDefault();           // منع إرسال الفورم
+            showWarning("Please fill all fields ❗");
+            return;                       // وقف التنفيذ
+        }
+
+    });
+
+
+
+</script>
 </body>
 </html>
