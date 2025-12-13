@@ -670,6 +670,7 @@ body { overflow-x: hidden; }
 .warning{ background:#f39c12; color:#fff; }
 
 #closePopup{ cursor:pointer; font-size:22px; float:right; }
+
 .clickToshow{
     cursor:pointer;
     color:white;
@@ -678,4 +679,7 @@ body { overflow-x: hidden; }
 }
 .clickToshow:hover{
     color: #ffbed5;
+}
+.noLine {
+    text-decoration: none;
 }

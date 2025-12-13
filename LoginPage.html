@@ -51,7 +51,7 @@
 
         <div class="loginR" >
             <h2>Enter your information to continue</h2>
-            <form action="PHPFile/Login.php" method="post">
+            <form action="Login.php" method="post">
                 <div class="LoginItem">
                     <p>Email :</p>
                     <input name="Email" type="email" placeholder="Enter Your Email " class="input emailInput">
@@ -120,20 +120,20 @@
 <script src="Js/login.js"></script>
 <?php if(!empty($errorMsg)): ?>
 <script>
-    // Read error from URL
+
     const urlParams = new URLSearchParams(window.location.search);
     const error = urlParams.get('error');
     loginBtn.addEventListener("click", function(e) {
 
         if (email.value.trim() === "" || pass.value.trim() === "") {
-            e.preventDefault();           // منع إرسال الفورم
+            e.preventDefault();
             showWarning("Please fill all fields ❗");
-            return;                       // وقف التنفيذ
+            return;
         }
 
     });
 
-    // إذا في error → اعرض popup
+
     if (error) {
         showError(error);
     }

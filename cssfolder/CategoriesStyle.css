@@ -375,8 +375,9 @@
     color: #f6cddd;
 }
 .stars {
+    gap: 20px;
     color: #FFD580;
-    margin-top: 5px;
+    margin-top: 10px;
     margin-bottom: 10px;
 }
 
