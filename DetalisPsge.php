@@ -121,10 +121,12 @@ $salePercent = $isSale ? (int)$book['SaleValuePers'] : null;
                     Order Now!
                 </button>
 
-                <button class="lablebu add-to-cart-btn"
-                        data-book-id="<?= $book['id'] ?>">
+                <button
+                        onclick="addToCartAndGo(<?= $book['id'] ?>)"
+                        class="lablebu add-to-cart-btn">
                     Add To Cart
                 </button>
+
             </div>
         </div>
     </div>
@@ -153,6 +155,24 @@ $salePercent = $isSale ? (int)$book['SaleValuePers'] : null;
         })
             .then(() => {
                 window.location.href = "checkout.php";
+            });
+    }
+</script>
+<script>
+    function addToCartAndGo(bookId) {
+        fetch("cart_action.php", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/x-www-form-urlencoded"
+            },
+            body: "book_id=" + bookId + "&action=add"
+        })
+            .then(response => response.text())
+            .then(() => {
+                window.location.href = "cart.php";
+            })
+            .catch(error => {
+                console.error("Error adding to cart:", error);
             });
     }
 </script>

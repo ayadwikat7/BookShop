@@ -52,37 +52,49 @@ $totalPages = ceil($totalCats / $catsPerPage);
 
 <body>
 
-<div class="main">
-    <header class="header">
+<?php include "topheader.php"; ?>
+<div class="Search">
+    <h2>🔍 Search For Your Favorite Book</h2>
+    <p class="hint">Write the name of a Book or use filters below</p>
 
-        <div class="top-bar">
-            <p>📚 Free shipping on orders over $50 | Discover your next great read today!</p>
+    <div class="SearchBox">
+        <input type="text" class="SearchInput" placeholder="Search for a book...">
+        <button class="SearchButton">
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+    </div>
+
+    <div class="FilterBox">
+        <h3>🎯 Filter Options</h3>
+
+        <div class="filters">
+            <select class="FilterSelect">
+                <option selected disabled>Category</option>
+                <option>Business</option>
+                <option>Technology</option>
+                <option>Psychology</option>
+                <option>Science Fiction</option>
+            </select>
+
+            <select class="FilterSelect">
+                <option selected disabled>Sort By</option>
+                <option>Highest Rated</option>
+                <option>Newest</option>
+                <option>Oldest</option>
+            </select>
+
+            <select class="FilterSelect">
+                <option selected disabled>Price Range</option>
+                <option>0 - 20$</option>
+                <option>21 - 50$</option>
+                <option>50$+</option>
+            </select>
         </div>
 
-        <div class="nav-container">
-            <div class="logo">
-                <i class="fa-solid fa-book-bookmark"></i>
-                <h1>Book Shop</h1>
-            </div>
-
-            <div class="user-icons">
-                <i class="fa-solid fa-heart"></i>
-                <i class="fa-solid fa-cart-shopping"></i>
-                <i class="fa-solid fa-user"></i>
-            </div>
-        </div>
-
-        <nav class="menu">
-            <ul>
-                <li><a href="index.php">Home</a></li>
-                <li><a href="AllBooks.php">Books</a></li>
-                <li><a href="#CategoryId">Categories</a></li>
-                <li><a href="Author.php">Authors</a></li>
-                <li><a href="ContactUs.php">Contact Us</a></li>
-            </ul>
-        </nav>
-
-    </header>
+        <button class="ApplyFilter">
+            <i class="fa-solid fa-filter"></i> Apply Filters
+        </button>
+    </div>
 </div>
 
 <!-- ================= Categories Section ================= -->
@@ -117,7 +129,9 @@ $totalPages = ceil($totalCats / $catsPerPage);
                         <i class="fa-solid fa-star"></i>
                         <i class="fa-regular fa-star"></i>
                     </div>
-
+                    <p style="font-size:14px; color:white; margin:15px 0;">
+                        📚 <?= (int)$cat['books_count'] ?> Books
+                    </p>
                 </div>
             </a>
 

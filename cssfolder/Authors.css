@@ -1,109 +1,428 @@
-.AuthorCard {
-    background: linear-gradient(145deg, #fde1df, #f7c7cf, #f3b1bb);
-    width: 60%;
-    margin: 60px auto;
-    border-radius: 25px;
-    box-shadow: 0 4px 15px rgba(166, 62, 100) ;
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    padding: 40px 60px;
-    transition: all 0.3s ease;
-    border: 1px solid rgba(166, 62, 100);
+/* ===============================
+   AUTHOR PAGE – FINAL DESIGN
+   Background + Equal Book Boxes
+================================ */
+
+/* -------- Page Background -------- */
+body {
+    background: #fde6e6;
 }
 
-.AuthorCard:hover {
-    transform: scale(1.02);
-    box-shadow: 0 8px 35px rgba(166, 62, 100, 0.6);
+/* -------- Author Card -------- */
+.AuthorCard {
+    width: min(1100px, 92%);
+    margin: 40px auto;
+    background: linear-gradient(#e78ca8, #d46282, #a63e64);
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(166,62,100,0.15);
+    display: flex;
+    gap: 28px;
+    padding: 26px;
 }
+
 
 .AuthorImage {
-    width: 200px;
-    height: auto;
-    border-radius: 50%;
+    width: 240px;
+    height: 240px;
     object-fit: cover;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 15px rgba(166, 62, 100);
+    border-radius: 18px;
+    background: #fde6eb;
+    flex-shrink: 0;
 }
 
 .AuthorContent {
-    color: #4a2f3d;
     flex: 1;
-    text-align: left;
 }
-
+.a{
+    text-decoration: none;
+}
 .AuthorName {
-    font-size: 1.8rem;
-    color: #a63e64;
-    margin-bottom: 10px;
-    text-shadow: 0 0 10px rgba(255, 180, 200, 0.4);
+    margin: 0;
+    font-size: 30px;
+    font-weight: 800;
+    color: #5a1730;
 }
-
 
 .AuthorStats {
     display: flex;
-    gap: 40px;
-    margin-bottom: 15px;
-    font-size: 1rem;
-    color: #70394f;
+    gap: 16px;
+    margin: 14px 0;
+    flex-wrap: wrap;
+}
+
+.AuthorStats p {
+    margin: 0;
+    background: white;
+    padding: 8px 16px;
+    border-radius: 16px;
+    font-size: 14px;
+    color: #7a2344;
+    font-weight: 600;
 }
 
 .AuthorStats i {
     color: #a63e64;
-    margin-right: 8px;
+    margin-right: 6px;
 }
 
-/* التقييم */
 .AuthorRating {
     display: flex;
     align-items: center;
-    gap: 5px;
-    margin-bottom: 20px;
+    gap: 6px;
+    margin-bottom: 14px;
 }
 
 .AuthorRating i {
-    color: #FFD580;
-    font-size: 1.1rem;
+    color: #ffb300;
 }
 
 .AuthorRating span {
-    color: #a63e64;
-    margin-left: 10px;
+    font-weight: 700;
+    color: #5a1730;
+}
+
+.AuthorBio {
+    font-size: 15px;
+    line-height: 1.7;
+    color: white;
+}
+
+/* -------- Books Section -------- */
+.BooksSectionSalesD {
+    width: min(1200px, 92%);
+    margin: 40px auto 80px;
+    background: linear-gradient(#e78ca8, #d46282, #a63e64);
+    border-radius: 30px;
+    padding: 40px 30px 60px;
+}
+
+.SectionTitleD {
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 900;
+    color:  #ffeaf1;
+    text-shadow: 0 0 12px rgba(255, 190, 210, 0.7);
+    margin-bottom: 10px;
+}
+
+.BooksSectionSalesD .hint {
+    text-align: center;
+    margin-bottom: 30px;
+    color: #7a2344;
     font-weight: 600;
 }
 
-/* نبذة الكاتب */
-.AuthorBio {
-    color: #6f4655;
-    font-size: 0.95rem;
-    line-height: 1.7;
-    max-width: 600px;
+/* -------- Books Grid -------- */
+.SalesCarouselD {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
 }
 
-.AuthorBio strong {
-    color: #a63e64;
+/* -------- Book Card (Fixed Size) -------- */
+.SalesCarouselD a {
+    text-decoration: none;
 }
 
-/* متجاوب للشاشات الصغيرة */
+.SalesCarouselD .BookCardD {
+    background: #f6c1cf;
+    border: 2px solid #a63e64;
+    border-radius: 22px;
+    padding: 16px;
+    text-align: center;
+
+    height: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    box-shadow: 0 12px 30px rgba(166,62,100,0.25);
+    transition: all 0.25s ease;
+}
+
+.SalesCarouselD .BookCardD:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 45px rgba(166,62,100,0.35);
+}
+
+/* -------- Book Image (Fixed Frame) -------- */
+.SalesCarouselD .BookCardD img {
+    width: 100%;
+    height: 200px;
+    object-fit: contain;
+    background: #f6c1cf;
+    border-radius: 16px;
+    padding: 10px;
+}
+
+/* -------- Book Title -------- */
+.SalesCarouselD .BookCardD h3 {
+    font-size: 16px;
+    font-weight: 800;
+    color: #5a1730;
+    margin: 10px 0 6px;
+    min-height: 40px;
+}
+
+/* -------- Rating -------- */
+.SalesCarouselD .BookCardD span {
+    font-size: 14px;
+    font-weight: 700;
+    color: #7a2344;
+}
+
+/* -------- Responsive -------- */
+@media (max-width: 992px) {
+    .SalesCarouselD {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
 @media (max-width: 768px) {
     .AuthorCard {
         flex-direction: column;
+        align-items: center;
         text-align: center;
-        padding: 30px;
-        width: 90%;
     }
 
     .AuthorImage {
-        width: 130px;
-        height: 130px;
+        width: 210px;
+        height: 210px;
     }
 
     .AuthorStats {
         justify-content: center;
-        gap: 20px;
+    }
+
+    .SalesCarouselD {
+        grid-template-columns: repeat(2, 1fr);
     }
 }
 
-a{
-    text-decoration: none;
+@media (max-width: 420px) {
+    .SalesCarouselD {
+        grid-template-columns: 1fr;
+    }
+}
+.BookCard:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 0 25px rgba(255, 200, 220, 0.5);
+}
+
+.BookCard img {
+    width: 120px;
+    height: 170px;
+    border-radius: 12px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+.BookCard h2 {
+    font-size: 1rem;
+    color: #ffeaf1;
+    margin-bottom: 5px;
+}
+.BookCard h3 {
+    font-size: 1rem;
+    color: #ffeaf1;
+    margin-bottom: 5px;
+}
+.BookCard p {
+    font-size: 0.9rem;
+    color: #f6cddd;
+}
+.BookCard {
+    flex: 0 0 auto;
+    width: 220px;
+    background: rgba(227, 210, 210, 0.3);
+
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 20px;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 20px rgba(255, 190, 210, 0.15);
+    transition: all 0.3s ease;
+
+}
+.Search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(145deg, rgba(231,140,168,0.3), rgba(212,98,130,0.2),#a63e64 );
+    border-radius: 20px;
+    border: 2px solid rgba(166, 62, 100);
+
+    box-shadow: 0 8px 25px rgba(166, 62, 100);
+    width: 80%;
+    margin: 60px auto;
+    color: #fff5f7;
+}
+
+.Search h2 {
+    font-size: 2rem;
+    color: rgba(166, 62, 100);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255,190,210,0.6);
+}
+
+.Search .hint {
+    color: rgba(166, 62, 100,0.5);
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.SearchBox {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(255, 190, 210, 0.25);
+    margin-bottom: 40px;
+    border: 1px solid rgba(166, 62, 100,0.5);
+
+}
+
+.SearchInput {
+    border: none;
+    padding: 14px 20px;
+    width: 350px;
+    outline: none;
+    background: transparent;
+    color: rgba(166, 62, 100,0.5);
+    font-size: 1rem;
+}
+
+.SearchInput::placeholder {
+    color: #ffe9ef;
+    opacity: 0.8;
+}
+
+.SearchButton {
+    background: #d46282;
+    border: none;
+    color: #fff;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.SearchButton:hover {
+    background: #a63e64;
+    transform: scale(1.05);
+}
+.FilterBox {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #a63e64;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 25px rgba(166, 62, 100, 0.5);
+    width: 85%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.FilterBox h3 {
+    color: #a63e64;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.FilterSelect {
+    background: #a63e64;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.FilterSelect:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ApplyFilter {
+    background: linear-gradient(135deg, #d46282, #a63e64);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.ApplyFilter:hover {
+    background: linear-gradient(135deg, #e78ca8, #d46282);
+    transform: translateY(-3px);
+}
+
+.hero {
+    width: 100%;
+    padding: 60px 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    background: rgba(0,0, 0, 0.1);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(12px);
+    border-radius: 20px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.2);
+}
+.pagination-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+
+}
+
+.page-btn {
+    padding: 20px;
+    background-color: #a63e64;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    font-weight: 500;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(166, 62, 100, 0.3);
+}
+
+.page-btn:hover {
+    background-color: #d46282;
+    box-shadow: 0 6px 18px rgba(166, 62, 100, 0.4);
+    transform: translateY(-2px);
+}
+
+.page-number {
+    margin-top: 30px;
+    font-size: 1rem;
+    color: #a63e64;
+    background: rgba(255, 220, 230, 0.4);
+    border-radius: 12px;
+    padding: 8px 20px;
+    font-weight: 600;
+    box-shadow: inset 0 0 10px rgba(166, 62, 100, 0.2);
+}
+
+.page-number strong {
+    color: #d46282;
 }

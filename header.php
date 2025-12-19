@@ -17,9 +17,9 @@
                 </div>
 
                 <div class="user-icons">
-                    <a href="favorite.html"> <i class="fa-solid fa-heart"></i></a>
-                    <a href=""><i class="fa-solid fa-cart-shopping"></i></a>
-                    <a href="Profile.html"><i class="fa-solid fa-user"></i></a>
+
+                    <a href="cart.php"><i class="fa-solid fa-cart-shopping"></i></a>
+                    <a href="Profile.php"><i class="fa-solid fa-user"></i></a>
 
                 </div>
             </div>
@@ -30,11 +30,11 @@
                     <li><a href="AllBooks.php">Books</a></li>
                     <li><a href="Categories.php">Categories</a></li>
                     <li><a href="#Best">Best Sellers</a></li>
-                    <li><a href="Author.html">Authors</a></li>
+                    <li><a href="Author.php">Authors</a></li>
                     <li><a href="#Recommended">Recommend for You</a></li>
                     <li><a href="#Sales">Sales</a></li>
                     <li><a href="ContactUs.html">Contact Us</a></li>
-                    <li><a href="LoginAsAdmin.html">Admin?</a></li>
+                    <li><a href="loginAsAdmin.php">Admin?</a></li>
                 </ul>
             </nav>
         </header>
@@ -45,8 +45,8 @@
                 <div class="textBox">
                     <h1>Welcome to BookShop</h1>
                     <p>Your world of stories begins here</p>
-                    <a href="LoginPage.html"> <button class="Login">Login To Your Account</button></a>
-                    <a href="Register.html"> <button class="CreateAccount">Create A New Account</button></a>
+                    <a href="auth.php"> <button class="Login">Login To Your Account</button></a>
+                    <a href="auth.php"> <button class="CreateAccount">Create A New Account</button></a>
                 </div>
                 <div class="scroll-indicator" onclick="scrollDown()">
                     <i class="fa-solid fa-angles-down"></i>

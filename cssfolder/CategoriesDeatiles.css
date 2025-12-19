@@ -12,31 +12,33 @@
     text-decoration: none;
 }
 
-.BooksSectionSalesD{
-    width: 90%;
-    max-width: 1500px;
-    text-align: center;
+.BooksSectionSalesD {
+    width: min(1200px, 92%);
+    margin: 30px auto 70px;
+}
 
-    border-radius: 20px;
-    transform: scale(1.05);
-    /*box-shadow: 0 0 15px rgba(162, 66, 100, 0.99);*/
-    /*background:linear-gradient(135deg, rgba(231, 140, 168, 0.5), rgba(212, 98, 130, 0.5), rgba(166, 62, 100, 0.5));*/
-    height:auto;
-    padding-top: 50px;
-    margin: 50px auto;
-    padding-bottom: 50px;
-    /*border:2px solid #a63e64;*/
+.SectionTitleD {
+
+    font-size: 26px;
+    font-weight: 800;
+    color: #222;
 }
-.BooksSectionSalesD a {
-    text-decoration: none;
+
+.BooksSectionSalesD .hint {
+    width: min(1200px, 92%);
+    margin: 30px auto 70px;
+    text-align: center; /* ✅ هذا المهم */
 }
+
 
 
 .SectionTitleD {
-    font-size:3rem;
-    color:  rgba(166, 62, 100, 0.65);
+
+    font-size: 3rem;
+    color: rgba(166, 62, 100, 0.65);
     text-shadow: 0 0 10px rgba(255, 190, 210, 0.6);
-    margin-bottom: 30px;
+    margin-bottom: 10px;
+    text-align: center; /* ✅ هذا المهم */
 }
 
 .BooksCarousel {
@@ -292,6 +294,9 @@
     margin-bottom: 10px;
 }
 
+.SalesCarouselD a {
+    text-decoration: none;
+}
 /* ======= Discount Badge ======= */
 .discount-badge {
     position: absolute;
@@ -343,7 +348,7 @@
 }
 
 .page-btn {
-    padding: 20px;
+    margin-top: 20px;
     background-color: #a63e64;
     color: #fff;
     border: none;
@@ -375,3 +380,129 @@
 .page-number strong {
     color: #d46282;
 }
+.Search {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(145deg, rgba(231,140,168,0.3), rgba(212,98,130,0.2),#a63e64 );
+    border-radius: 20px;
+    border: 2px solid rgba(166, 62, 100);
+
+    box-shadow: 0 8px 25px rgba(166, 62, 100);
+    width: 80%;
+    margin: 60px auto;
+    color: #fff5f7;
+}
+
+.Search h2 {
+    font-size: 2rem;
+    color: rgba(166, 62, 100);
+    margin-bottom: 10px;
+    text-shadow: 0 0 10px rgba(255,190,210,0.6);
+}
+
+.Search .hint {
+    color: rgba(166, 62, 100,0.5);
+    font-size: 1rem;
+    margin-bottom: 25px;
+}
+
+.SearchBox {
+    display: flex;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 40px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(255, 190, 210, 0.25);
+    margin-bottom: 40px;
+    border: 1px solid rgba(166, 62, 100,0.5);
+
+}
+
+.SearchInput {
+    border: none;
+    padding: 14px 20px;
+    width: 350px;
+    outline: none;
+    background: transparent;
+    color: rgba(166, 62, 100,0.5);
+    font-size: 1rem;
+}
+
+.SearchInput::placeholder {
+    color: #ffe9ef;
+    opacity: 0.8;
+}
+
+.SearchButton {
+    background: #d46282;
+    border: none;
+    color: #fff;
+    padding: 14px 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.SearchButton:hover {
+    background: #a63e64;
+    transform: scale(1.05);
+}
+.FilterBox {
+    background: rgba(255, 255, 255, 0.5);
+    border: 1px solid #a63e64;
+    border-radius: 15px;
+    padding: 25px 30px;
+    box-shadow: 0 6px 25px rgba(166, 62, 100, 0.5);
+    width: 85%;
+    max-width: 800px;
+    text-align: center;
+}
+
+.FilterBox h3 {
+    color: #a63e64;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+.filters {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.FilterSelect {
+    background: #a63e64;
+    color: #fff;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    border-radius: 25px;
+    padding: 10px 20px;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.FilterSelect:hover {
+    background: rgba(255, 255, 255, 0.25);
+}
+
+.ApplyFilter {
+    background: linear-gradient(135deg, #d46282, #a63e64);
+    color: #fff;
+    border: none;
+    padding: 10px 25px;
+    border-radius: 25px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.ApplyFilter:hover {
+    background: linear-gradient(135deg, #e78ca8, #d46282);
+    transform: translateY(-3px);
+}
+

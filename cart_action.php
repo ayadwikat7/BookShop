@@ -14,6 +14,7 @@ if (!isset($_SESSION['cart'])) {
 }
 
 switch ($action) {
+
     case 'add':
         $_SESSION['cart'][$bookId] = ($_SESSION['cart'][$bookId] ?? 0) + 1;
         break;
@@ -25,6 +26,10 @@ switch ($action) {
                 unset($_SESSION['cart'][$bookId]);
             }
         }
+        break;
+
+    case 'clear':
+        $_SESSION['cart'] = [];
         break;
 }
 

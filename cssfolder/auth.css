@@ -1,0 +1,286 @@
+/* =========================
+   GLOBAL
+========================= */
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+}
+
+body{
+    background:linear-gradient(135deg,#fde1df,#fbc2d9);
+    min-height:100vh;
+    font-family:'Poppins',sans-serif;
+}
+
+/* =========================
+   CENTER WRAPPER
+========================= */
+.auth-wrapper{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+/* =========================
+   MAIN CONTAINER
+========================= */
+.auth-container{
+    position:relative;
+    width:920px;
+
+    /* 🔧 صار مرن */
+    min-height:600px;
+    height:auto;
+
+    border-radius:32px;
+    overflow:hidden;
+    box-shadow:0 40px 90px rgba(0,0,0,.25);
+}
+
+/* =========================
+   LEFT BACKGROUND (PINK)
+========================= */
+.bg-side{
+    position:absolute;
+    inset:0;
+    background:linear-gradient(
+            120deg,
+            #e78ca8 0%,
+            #d46282 50%,
+            transparent 50%
+    );
+    z-index:0;
+}
+
+/* =========================
+   CONTENT SIDE (TEXT)
+========================= */
+.content-side{
+    position:absolute;
+    top:0;
+    left:0;
+    width:50%;
+    height:100%;
+    padding:60px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    gap:18px;
+
+    color:#7a2f4f;
+    z-index:3;
+    pointer-events:none;
+
+    transition:all .9s cubic-bezier(.77,0,.18,1);
+}
+
+.auth-container.register-mode .content-side{
+    left:50%;
+}
+
+/* =========================
+   TITLES & TEXT
+========================= */
+.side-title{
+    font-size:38px;
+    font-weight:600;
+}
+
+.side-desc{
+    font-size:16px;
+    line-height:1.7;
+    opacity:.85;
+}
+
+/* =========================
+   FORM BOX (GLASS)
+========================= */
+.form-box{
+    position:absolute;
+    top:0;
+    right:0;
+    width:50%;
+    height:100%;
+
+    background:rgba(255,255,255,.75);
+    backdrop-filter:blur(18px);
+    -webkit-backdrop-filter:blur(18px);
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    z-index:2;
+    transition:transform .9s cubic-bezier(.77,0,.18,1);
+
+    /* 🔧 الحل الأساسي */
+    overflow-y:auto;
+}
+
+/* Scroll جميل */
+.form-box::-webkit-scrollbar{
+    width:6px;
+}
+.form-box::-webkit-scrollbar-thumb{
+    background:#d46282;
+    border-radius:10px;
+}
+
+/* Register → الفورم يروح يسار */
+.auth-container.register-mode .form-box{
+    transform:translateX(-100%);
+}
+
+/* =========================
+   FORMS
+========================= */
+.form{
+    width:75%;
+    padding:10px 0;
+
+    display:flex;
+    flex-direction:column;
+    gap:12px;          /* 🔧 صغرنا المسافات */
+    animation:fadeUp .8s ease;
+}
+
+.form h2{
+    text-align:center;
+    color:#a63e64;
+    margin-bottom:8px;
+}
+
+/* Inputs */
+.form input,
+.role-select{
+    height:42px;       /* 🔧 ارتفاع أقل */
+    border-radius:25px;
+    border:1px solid #d46282;
+    padding:0 16px;
+    font-size:15px;
+    outline:none;
+    background:white;
+    color:#555;
+}
+
+.form input:focus,
+.role-select:focus{
+    border-color:#a63e64;
+    box-shadow:0 0 10px rgba(164,62,100,.5);
+}
+
+/* Button */
+.form button{
+    height:44px;
+    border:none;
+    border-radius:30px;
+    background:linear-gradient(135deg,#e78ca8,#d46282,#a63e64);
+    color:white;
+    font-weight:600;
+    cursor:pointer;
+    transition:.35s;
+}
+
+.form button:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 20px rgba(164,62,100,.85);
+}
+
+/* =========================
+   SWITCH TEXT
+========================= */
+.switch-text{
+    text-align:center;
+    font-size:14px;
+}
+
+.switch-text strong{
+    color:#a63e64;
+    cursor:pointer;
+}
+
+.admin-link{
+    color:#a63e64;
+    font-weight:600;
+    text-decoration:none;
+}
+
+.admin-link:hover{
+    text-decoration:underline;
+}
+
+/* =========================
+   LOGIN / REGISTER VISIBILITY
+========================= */
+.register-form{
+    display:none;
+}
+
+.auth-container.register-mode .login-form{
+    display:none;
+}
+
+.auth-container.register-mode .register-form{
+    display:flex;
+}
+
+/* =========================
+   TEXT SWITCH
+========================= */
+.register-text{
+    display:none;
+}
+
+.auth-container.register-mode .login-text{
+    display:none;
+}
+
+.auth-container.register-mode .register-text{
+    display:block;
+}
+
+/* =========================
+   ANIMATION
+========================= */
+@keyframes fadeUp{
+    from{
+        opacity:0;
+        transform:translateY(20px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   POPUP
+========================= */
+.popup{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.5);
+    display:none;
+    justify-content:center;
+    align-items:center;
+    z-index:999;
+}
+
+.popup-content{
+    background:white;
+    padding:35px;
+    width:300px;
+    border-radius:16px;
+    text-align:center;
+    box-shadow:0 0 20px rgba(0,0,0,.3);
+    color:black;
+}
+
+#closePopup{
+    float:right;
+    cursor:pointer;
+    font-size:20px;
+}

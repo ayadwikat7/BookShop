@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function(){
         }
         else{
             showSuccess("Login Successful! Redirecting...");
-            setTimeout(()=> window.location.href="DapshBoard.html",1500);
+            setTimeout(()=> window.location.href="adminDashboard.php",1500);
         }
     });
 

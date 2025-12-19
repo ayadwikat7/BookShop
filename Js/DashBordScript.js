@@ -20,10 +20,14 @@ function openRemoveCategory() {
 
     document.getElementById('RemoveCategory').showModal();
 }
-function openRemoveSales() {
+function openAddSale() {
+    document.getElementById('AddSale').showModal();
+}
 
+function openRemoveSale() {
     document.getElementById('RemoveSale').showModal();
 }
+
 function openAddAuthor() {
     document.getElementById('AuthorDialogTitle').innerHTML = "Add Author";
     document.getElementById('AddAuthor').showModal();

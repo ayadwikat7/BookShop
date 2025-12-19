@@ -1,36 +1,61 @@
 <?php
 global $connection;
 include "db.php";
-//////////////////////////////
-// 3) Get Categories
-//////////////////////////////
-$categories_sql = "SELECT * FROM categories ORDER BY id ASC LIMIT 10";
-$categories_result = $connection->query($categories_sql);
 
+/* ================= HERO BOOK ================= */
+$hero_sql = "
+    SELECT b.*, a.name AS author_name
+    FROM books b
+    JOIN authors a ON b.author_id = a.id
+    ORDER BY b.rating DESC
+    LIMIT 1
+";
+$hero = $connection->query($hero_sql)->fetch_assoc();
 
-$books_sql = "SELECT b.*, a.name AS author_name 
-              FROM books b 
-              JOIN authors a ON b.author_id = a.id
-              ORDER BY rating DESC 
-              LIMIT 3";
-$books_result = $connection->query($books_sql);
+/* ================= AUTHORS ================= */
+$authors = $connection->query("
+    SELECT * FROM authors
+    ORDER BY rating DESC
+    LIMIT 4
+");
 
-//////////////////////////////
-// 2) Get Authors
-//////////////////////////////
-$authors_sql = "SELECT * FROM authors ORDER BY rating DESC";
-$authors_result = $connection->query($authors_sql);
+/* ================= POPULAR BOOKS ================= */
+$books = $connection->query("
+    SELECT b.*, a.name AS author_name
+    FROM books b
+    JOIN authors a ON b.author_id = a.id
+    ORDER BY b.rating DESC
+    LIMIT 8
+");
 
-//////////////////////////////
-// 3) Get Popular Books (All Books Ordered by Rating)
-//////////////////////////////
-$popular_sql = "SELECT b.*, a.name AS author_name 
-                FROM books b 
-                JOIN authors a ON b.author_id = a.id
-                ORDER BY rating DESC";
-$popular_result = $connection->query($popular_sql);
+/* ================= CATEGORIES ================= */
+$categories = $connection->query("
+    SELECT c.*, COUNT(b.id) AS books_count
+    FROM categories c
+    LEFT JOIN books b ON b.category_id = c.id
+    GROUP BY c.id
+    LIMIT 6
+");
+
+/* ================= IMAGE FIX FUNCTION ================= */
+function fixImage($img) {
+    $img = ltrim($img, './');
+    if (strpos($img, 'categories/') === false) {
+        $img = preg_replace('#^imge/#', 'imge/categories/', $img, 1);
+    }
+    return $img;
+}
+/* ================= SALE BOOKS ================= */
+$sale_books = $connection->query("
+    SELECT b.*, a.name AS author_name
+    FROM books b
+    JOIN authors a ON b.author_id = a.id
+    WHERE b.isSale = 1
+    ORDER BY b.rating DESC
+   
+");
+
 ?>
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -38,214 +63,126 @@ $popular_result = $connection->query($popular_sql);
     <title>Book Shop</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- FONTS & ICONS -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+    <!-- Fonts & Icons -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- CSS FILES -->
-    <link rel="stylesheet" href="cssfolder/indexStyle.css">
+    <!-- CSS -->
     <link rel="stylesheet" href="cssfolder/header.css">
     <link rel="stylesheet" href="cssfolder/footer.css">
-
-    <!-- JS -->
-    <script src="Js/Scroll.js"></script>
+    <link rel="stylesheet" href="cssfolder/indexStyle.css">
+    <link rel="stylesheet" href="cssfolder/CategoriesDeatiles.css">
 </head>
-
 <body>
 
-<div class="main">
+<?php include "header.php"; ?>
 
-    <!-- ======================================================
-                         HEADER SECTION
-    ======================================================= -->
-    <?php include "header.php"; ?>
+<!-- ================= HERO ================= -->
+<section class="hero reveal">
+    <div class="hero-content">
+        <span class="badge">Top Rated</span>
+        <h1><?= htmlspecialchars($hero['title']) ?></h1>
+        <p class="author">by <?= htmlspecialchars($hero['author_name']) ?></p>
+        <p class="desc"><?= htmlspecialchars(substr($hero['description'],0,160)) ?>...</p>
 
-</div>
-
-<!-- ==========================================
-            TOP RATED BOOKS
-=========================================== -->
-<div id="Best" class="top-barSecond">
-    <p>Meet the Books That Redefined Success and Inspiration</p>
-</div>
-
-<div class="HorezantalBook">
-
-    <?php while ($book = $books_result->fetch_assoc()): ?>
-        <?php
-
-        $bookImg = $book['image'];
-        if (strpos($bookImg, 'categories/') === false) {
-
-            $bookImg = preg_replace('#^imge/#', 'imge/categories/', $bookImg);
-        }
-        ?>
-        <a href="DetalisPsge.php?id=<?= $book['id'] ?>" class="aunco">
-            <div class="Books reveal">
-
-                <img src="./<?= $bookImg ?>" class="imgeBook">
-
-                <h2><?= $book['title'] ?></h2>
-                <p><?= $book['author_name'] ?></p>
-
-                <div class="stars">
-                    <?php for ($i = 0; $i < $book['rating']; $i++): ?>
-                        <i class="fa-solid fa-star"></i>
-                    <?php endfor; ?>
-                </div>
-
-            </div>
+        <a href="DetalisPsge.php?id=<?= $hero['id'] ?>" class="btn-primary">
+            Explore Book →
         </a>
-    <?php endwhile; ?>
-
-    <div class="whySection reveal">
-        <h2 class="whyTitle">Why These Books Have the Highest Selling Rate?</h2>
-
-        <div class="whyContainer">
-            <div class="whyCard">
-                <h3>Inspiring & Life-Changing Lessons</h3>
-                <p>These books share timeless lessons helping readers rethink success and mindset.</p>
-            </div>
-
-            <div class="whyCard">
-                <h3>Global Popularity & Trust</h3>
-                <p>Loved by millions worldwide, translated into many languages.</p>
-            </div>
-
-            <div class="whyCard">
-                <h3>Practical & Easy</h3>
-                <p>Real-life examples and practical frameworks for everyone.</p>
-            </div>
-        </div>
     </div>
-</div>
 
+    <img src="<?= fixImage($hero['image']) ?>" class="hero-img" alt="<?= htmlspecialchars($hero['title']) ?>">
+</section>
 
-<!-- ==========================================
-            AUTHORS SECTION
-=========================================== -->
-<div id="AuthorId" class="AuthorTap">
-    <p>Author in our bookshop</p>
-</div>
+<!-- ================= POPULAR BOOKS ================= -->
+<section class="section">
+    <h2 class="section-title">Popular Books</h2>
+    <p class="hint">Readers’ favorites</p>
 
-<div class="Author">
-    <section id="AuthorsShowcase" class="hero-author">
-        <div id="authorsContainer">
+    <div class="grid books">
+        <?php while($b = $books->fetch_assoc()): ?>
+            <a href="DetalisPsge.php?id=<?= $b['id'] ?>" class="book-card reveal">
+                <img src="<?= fixImage($b['image']) ?>" alt="<?= htmlspecialchars($b['title']) ?>">
+                <h3><?= htmlspecialchars($b['title']) ?></h3>
+                <p><?= htmlspecialchars($b['author_name']) ?></p>
+            </a>
+        <?php endwhile; ?>
+    </div>
 
-            <?php while ($a = $authors_result->fetch_assoc()): ?>
-                <?php
-                // إصلاح مسار صورة الكاتب
-                $authorImg = $a['image'];          // مثال: imge/authors/jamesclear.jpg
-                if (strpos($authorImg, 'categories/') === false) {
-                    $authorImg = preg_replace('#^imge/#', 'imge/categories/', $authorImg);
-                }
-                ?>
-                <div class="AuthorBlock reveal">
+    <div class="cta">
+        <a href="AllBooks.php" class="btn-outline">View All Books</a>
+    </div>
+</section>
 
-                    <div class="author-img">
-                        <img src="./<?= $authorImg ?>">
-                    </div>
+<!-- ================= AUTHORS ================= -->
+<section class="section alt">
+    <h2 class="section-title">Top Authors</h2>
 
-                    <div class="author-info">
-                        <p class="hello">HELLO! I'M</p>
-                        <h1 class="name"><?= $a['name'] ?></h1>
-                        <h3 class="role">Author & Writer</h3>
-
-                        <p class="bio">
-                            Books written: <?= $a['books_written'] ?> • Rating: <?= $a['rating'] ?>
-                        </p>
-
-                        <a href="author.php?id=<?= $a['id'] ?>" class="read-btn">Read Bio →</a>
-                        <button class="scrollNext" onclick="scrollToNext()">↓ Scroll</button>
-                    </div>
-
-                </div>
-            <?php endwhile; ?>
-
-        </div>
-    </section>
-</div>
-
-
-<!-- ==========================================
-            POPULAR BOOKS (DYNAMIC)
-=========================================== -->
-<div id="CategoriesBooks" class="AuthorTap">
-    <p>Popular Books</p>
-</div>
-
-<div class="SecondBackGround">
-    <section class="hero">
-
-        <h2 class="SectionTitle">Popular Books</h2>
-        <a href="AllBooks.php" class="noLine">
-            <h3 class="clickToshow">Click to show all Books</h3>
-        </a>
-
-        <div class="BooksSectionBo">
-            <div class="BooksCarousel" id="loopCarousel">
-
-                <?php while ($p = $popular_result->fetch_assoc()): ?>
-                    <?php
-
-                    $popImg = $p['image'];
-                    if (strpos($popImg, 'categories/') === false) {
-                        $popImg = preg_replace('#^imge/#', 'imge/categories/', $popImg);
-                    }
-                    ?>
-                    <a href="DetalisPsge.php?id=<?= $p['id'] ?>" class="noLine">
-                        <div class="BookCard reveal">
-
-                            <img src="./<?= $popImg ?>">
-                            <h2><?= $p['title'] ?></h2>
-                            <p>by <?= $p['author_name'] ?></p>
-
-                            <div class="stars">
-                                <?php for ($i = 0; $i < $p['rating']; $i++): ?>
-                                    <i class="fa-solid fa-star"></i>
-                                <?php endfor; ?>
-                            </div>
-
-                        </div>
-                    </a>
-                <?php endwhile; ?>
-
+    <div class="grid authors">
+        <?php while($a = $authors->fetch_assoc()): ?>
+            <div class="author-card reveal">
+                <img src="<?= fixImage($a['image']) ?>" alt="<?= htmlspecialchars($a['name']) ?>">
+                <h3><?= htmlspecialchars($a['name']) ?></h3>
+                <span>⭐ <?= $a['rating'] ?></span>
+                <a href="AuthorBooks.php?id=<?= $a['id'] ?>">View Profile</a>
             </div>
-        </div>
+        <?php endwhile; ?>
+    </div>
+
+    <div class="cta">
+        <a href="Author.php" class="btn-outline">View All Authors</a>
+    </div>
+</section>
+
+<!-- ================= CATEGORIES ================= -->
+<section class="section">
+    <h2 class="section-title">Categories</h2>
+
+    <div class="grid categories">
+        <?php while($c = $categories->fetch_assoc()): ?>
+            <a href="CategoryDeatlies.php?id=<?= $c['id'] ?>" class="category-card reveal">
+                <img src="<?= fixImage($c['image']) ?>" alt="<?= htmlspecialchars($c['name']) ?>">
+                <div class="overlay">
+                    <h3><?= htmlspecialchars($c['name']) ?></h3>
+                    <span><?= $c['books_count'] ?> Books</span>
+                </div>
+            </a>
+        <?php endwhile; ?>
+    </div>
+
+    <div class="cta">
+        <a href="Categories.php" class="btn-primary">Browse All Categories</a>
+    </div>
+</section>
+<!-- ================= SALE SECTION ================= -->
+<section class="section sale-section">
+    <h2 class="section-title">🔥 Special Offers</h2>
+    <p class="hint">Limited-time deals you don’t want to miss</p>
+
+    <div class="grid sale-grid">
+        <?php while($s = $sale_books->fetch_assoc()): ?>
+            <a href="DetalisPsge.php?id=<?= $s['id'] ?>" class="sale-card reveal">
+                <span class="sale-badge">SALE</span>
+
+                <img src="<?= fixImage($s['image']) ?>" alt="<?= htmlspecialchars($s['title']) ?>">
+
+                <h3><?= htmlspecialchars($s['title']) ?></h3>
+                <p class="author"><?= htmlspecialchars($s['author_name']) ?></p>
+
+                <div class="price-box">
+                    <?php if (!empty($s['old_price'])): ?>
+                        <span class="old-price">$<?= $s['old_price'] ?></span>
+                    <?php endif; ?>
+                    <span class="new-price">$<?= $s['price'] ?></span>
+                </div>
+            </a>
+        <?php endwhile; ?>
+    </div>
 
 
-        <!-- CATEGORIES STATIC -->
-        <h2 class="SectionTitle">Categories</h2>
-        <a href="Categories.php" class="noLine">
-            <h3 class="clickToshow">click to show all categories</h3>
-        </a>
-
-        <div id="CategoriesCarousel" class="CategoriesCarousel3D">
-
-            <?php while ($c = $categories_result->fetch_assoc()): ?>
-                <a href="CategoryDeatlies.php?id=<?= $c['id'] ?>" class="noLine">
-                    <div class="CatCard reveal">
-                        <img src="./<?= $c['image'] ?>">
-                        <h3><?= $c['name'] ?></h3>
-                    </div>
-                </a>
-            <?php endwhile; ?>
-
-        </div>
-
-
-    </section>
-</div>
-
+</section>
 
 <?php include "footer.php"; ?>
 
-<!-- JS FILES -->
-<script src="Js/AuthorCard.js"></script>
-<script src="Js/authors.js"></script>
-<script src="Js/CategoryMoation.js"></script>
-<script src="Js/Recomandedmotion.js"></script>
-<script src="Js/PopularBooks.js"></script>
-
+<script src="Js/index.js"></script>
 </body>
 </html>

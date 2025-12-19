@@ -8,13 +8,13 @@ $books = [];
 $total = 0;
 
 if (!empty($cart)) {
-    $ids = implode(",", array_keys($cart));
+    $ids = implode(",", array_map("intval", array_keys($cart)));
     $sql = "SELECT id, title, price, image FROM books WHERE id IN ($ids)";
     $result = $connection->query($sql);
 
     while ($row = $result->fetch_assoc()) {
-        $qty = $cart[$row['id']];
-        $subtotal = $qty * $row['price'];
+        $qty = (int)$cart[$row['id']];
+        $subtotal = $qty * (float)$row['price'];
 
         $row['qty'] = $qty;
         $row['subtotal'] = $subtotal;
@@ -47,7 +47,6 @@ if (!empty($cart)) {
         <p>Your cart is empty.</p>
     <?php else: ?>
 
-        <!-- 🛒 ORDER SUMMARY -->
         <div class="order-summary">
             <h3>Your Order</h3>
 
@@ -55,47 +54,39 @@ if (!empty($cart)) {
                 <div class="order-item">
                     <div class="item-info">
                         <h4><?= htmlspecialchars($book['title']) ?></h4>
-                        <p>Price: $<?= number_format($book['price'], 2) ?></p>
-                        <p>Quantity: <?= $book['qty'] ?></p>
+                        <p>Price: $<?= number_format((float)$book['price'], 2) ?></p>
+                        <p>Quantity: <?= (int)$book['qty'] ?></p>
                     </div>
 
                     <div class="item-subtotal">
-                        $<?= number_format($book['subtotal'], 2) ?>
+                        $<?= number_format((float)$book['subtotal'], 2) ?>
                     </div>
                 </div>
             <?php endforeach; ?>
 
             <div class="order-total">
                 <span>Total</span>
-                <strong>$<?= number_format($total, 2) ?></strong>
+                <strong>$<?= number_format((float)$total, 2) ?></strong>
             </div>
         </div>
 
-        <!-- 📦 CUSTOMER INFO -->
-        <form class="checkout-form">
+        <form class="checkout-form" method="POST" action="place_order.php">
             <label>Full Name</label>
-            <input type="text" placeholder="Your name" required>
+            <input type="text" name="full_name" placeholder="Your name" required>
 
             <label>Address</label>
-            <input type="text" placeholder="Your address" required>
+            <input type="text" name="address" placeholder="Your address" required>
 
             <label>Phone</label>
-            <input type="text" placeholder="Phone number" required>
+            <input type="text" name="phone" placeholder="Phone number" required>
 
-            <button type="button" onclick="confirmOrder()">Confirm Order</button>
+            <button type="submit">Confirm Order</button>
         </form>
 
     <?php endif; ?>
 </div>
 
 <?php include "footer.php"; ?>
-
-<script>
-    function confirmOrder() {
-        alert("🎉 Your order has been placed successfully!\nThank you for shopping with us 💗");
-        window.location.href = "index.php";
-    }
-</script>
 
 </body>
 </html>
